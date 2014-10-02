@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F54FFEB619DDE948004848EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFEB519DDE948004848EE /* AppDelegate.m */; };
+		F54FFEB819DDE948004848EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFEB719DDE948004848EE /* main.m */; };
+		F54FFEBB19DDE948004848EE /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFEBA19DDE948004848EE /* GameScene.m */; };
+		F54FFEBD19DDE948004848EE /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F54FFEBC19DDE948004848EE /* GameScene.sks */; };
+		F54FFEBF19DDE948004848EE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F54FFEBE19DDE948004848EE /* Images.xcassets */; };
+		F54FFEC219DDE948004848EE /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F54FFEC019DDE948004848EE /* MainMenu.xib */; };
+		F54FFECE19DDE949004848EE /* HedzupPongGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFECD19DDE949004848EE /* HedzupPongGameTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F54FFEC819DDE949004848EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F54FFEA719DDE948004848EE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F54FFEAE19DDE948004848EE;
+			remoteInfo = HedzupPongGame;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F54FFEAF19DDE948004848EE /* HedzupPongGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HedzupPongGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54FFEB319DDE948004848EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F54FFEB419DDE948004848EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F54FFEB519DDE948004848EE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F54FFEB719DDE948004848EE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F54FFEB919DDE948004848EE /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		F54FFEBA19DDE948004848EE /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		F54FFEBC19DDE948004848EE /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		F54FFEBE19DDE948004848EE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F54FFEC119DDE948004848EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		F54FFEC719DDE949004848EE /* HedzupPongGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HedzupPongGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54FFECC19DDE949004848EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F54FFECD19DDE949004848EE /* HedzupPongGameTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HedzupPongGameTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F54FFEAC19DDE948004848EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54FFEC419DDE949004848EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F54FFEA619DDE948004848EE = {
+			isa = PBXGroup;
+			children = (
+				F54FFEB119DDE948004848EE /* HedzupPongGame */,
+				F54FFECA19DDE949004848EE /* HedzupPongGameTests */,
+				F54FFEB019DDE948004848EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F54FFEB019DDE948004848EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F54FFEAF19DDE948004848EE /* HedzupPongGame.app */,
+				F54FFEC719DDE949004848EE /* HedzupPongGameTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F54FFEB119DDE948004848EE /* HedzupPongGame */ = {
+			isa = PBXGroup;
+			children = (
+				F54FFEB419DDE948004848EE /* AppDelegate.h */,
+				F54FFEB519DDE948004848EE /* AppDelegate.m */,
+				F54FFEB919DDE948004848EE /* GameScene.h */,
+				F54FFEBA19DDE948004848EE /* GameScene.m */,
+				F54FFEBC19DDE948004848EE /* GameScene.sks */,
+				F54FFEBE19DDE948004848EE /* Images.xcassets */,
+				F54FFEC019DDE948004848EE /* MainMenu.xib */,
+				F54FFEB219DDE948004848EE /* Supporting Files */,
+			);
+			path = HedzupPongGame;
+			sourceTree = "<group>";
+		};
+		F54FFEB219DDE948004848EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F54FFEB319DDE948004848EE /* Info.plist */,
+				F54FFEB719DDE948004848EE /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F54FFECA19DDE949004848EE /* HedzupPongGameTests */ = {
+			isa = PBXGroup;
+			children = (
+				F54FFECD19DDE949004848EE /* HedzupPongGameTests.m */,
+				F54FFECB19DDE949004848EE /* Supporting Files */,
+			);
+			path = HedzupPongGameTests;
+			sourceTree = "<group>";
+		};
+		F54FFECB19DDE949004848EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F54FFECC19DDE949004848EE /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F54FFEAE19DDE948004848EE /* HedzupPongGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F54FFED119DDE949004848EE /* Build configuration list for PBXNativeTarget "HedzupPongGame" */;
+			buildPhases = (
+				F54FFEAB19DDE948004848EE /* Sources */,
+				F54FFEAC19DDE948004848EE /* Frameworks */,
+				F54FFEAD19DDE948004848EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HedzupPongGame;
+			productName = HedzupPongGame;
+			productReference = F54FFEAF19DDE948004848EE /* HedzupPongGame.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F54FFEC619DDE949004848EE /* HedzupPongGameTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F54FFED419DDE949004848EE /* Build configuration list for PBXNativeTarget "HedzupPongGameTests" */;
+			buildPhases = (
+				F54FFEC319DDE949004848EE /* Sources */,
+				F54FFEC419DDE949004848EE /* Frameworks */,
+				F54FFEC519DDE949004848EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F54FFEC919DDE949004848EE /* PBXTargetDependency */,
+			);
+			name = HedzupPongGameTests;
+			productName = HedzupPongGameTests;
+			productReference = F54FFEC719DDE949004848EE /* HedzupPongGameTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F54FFEA719DDE948004848EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = tappnology;
+				TargetAttributes = {
+					F54FFEAE19DDE948004848EE = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					F54FFEC619DDE949004848EE = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = F54FFEAE19DDE948004848EE;
+					};
+				};
+			};
+			buildConfigurationList = F54FFEAA19DDE948004848EE /* Build configuration list for PBXProject "HedzupPongGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F54FFEA619DDE948004848EE;
+			productRefGroup = F54FFEB019DDE948004848EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F54FFEAE19DDE948004848EE /* HedzupPongGame */,
+				F54FFEC619DDE949004848EE /* HedzupPongGameTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F54FFEAD19DDE948004848EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F54FFEBD19DDE948004848EE /* GameScene.sks in Resources */,
+				F54FFEBF19DDE948004848EE /* Images.xcassets in Resources */,
+				F54FFEC219DDE948004848EE /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54FFEC519DDE949004848EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F54FFEAB19DDE948004848EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F54FFEB819DDE948004848EE /* main.m in Sources */,
+				F54FFEBB19DDE948004848EE /* GameScene.m in Sources */,
+				F54FFEB619DDE948004848EE /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54FFEC319DDE949004848EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F54FFECE19DDE949004848EE /* HedzupPongGameTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F54FFEC919DDE949004848EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F54FFEAE19DDE948004848EE /* HedzupPongGame */;
+			targetProxy = F54FFEC819DDE949004848EE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F54FFEC019DDE948004848EE /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F54FFEC119DDE948004848EE /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F54FFECF19DDE949004848EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F54FFED019DDE949004848EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		F54FFED219DDE949004848EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HedzupPongGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F54FFED319DDE949004848EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HedzupPongGame/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F54FFED519DDE949004848EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HedzupPongGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HedzupPongGame.app/Contents/MacOS/HedzupPongGame";
+			};
+			name = Debug;
+		};
+		F54FFED619DDE949004848EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HedzupPongGameTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HedzupPongGame.app/Contents/MacOS/HedzupPongGame";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F54FFEAA19DDE948004848EE /* Build configuration list for PBXProject "HedzupPongGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F54FFECF19DDE949004848EE /* Debug */,
+				F54FFED019DDE949004848EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F54FFED119DDE949004848EE /* Build configuration list for PBXNativeTarget "HedzupPongGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F54FFED219DDE949004848EE /* Debug */,
+				F54FFED319DDE949004848EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F54FFED419DDE949004848EE /* Build configuration list for PBXNativeTarget "HedzupPongGameTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F54FFED519DDE949004848EE /* Debug */,
+				F54FFED619DDE949004848EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F54FFEA719DDE948004848EE /* Project object */;
+}
