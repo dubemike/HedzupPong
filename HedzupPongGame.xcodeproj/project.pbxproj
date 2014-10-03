@@ -16,8 +16,6 @@
 		F54FFECE19DDE949004848EE /* HedzupPongGameTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFECD19DDE949004848EE /* HedzupPongGameTests.m */; };
 		F5695D1A19DE97A000DBA058 /* white-strip.png in Resources */ = {isa = PBXBuildFile; fileRef = F5695D1919DE97A000DBA058 /* white-strip.png */; };
 		F5695D1C19DEA45200DBA058 /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = F5695D1B19DEA45200DBA058 /* ball.png */; };
-		F5695D1F19DEB80700DBA058 /* PaddleBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5695D1E19DEB80700DBA058 /* PaddleBoard.m */; };
-		F5695D2219DEB91C00DBA058 /* BallObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F5695D2119DEB91C00DBA058 /* BallObject.m */; };
 		F5695D2519DECD5C00DBA058 /* HUPongGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F5695D2419DECD5C00DBA058 /* HUPongGameObject.m */; };
 		F5695D2819DED2F600DBA058 /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F5695D2719DED2F500DBA058 /* GameOverScene.m */; };
 		F5695D2D19DED42B00DBA058 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F5695D2C19DED42B00DBA058 /* MainMenu.m */; };
@@ -51,10 +49,6 @@
 		F5695D1519DE875300DBA058 /* globalConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = globalConstants.h; sourceTree = "<group>"; };
 		F5695D1919DE97A000DBA058 /* white-strip.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "white-strip.png"; path = "Assets/white-strip.png"; sourceTree = "<group>"; };
 		F5695D1B19DEA45200DBA058 /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ball.png; path = Assets/ball.png; sourceTree = "<group>"; };
-		F5695D1D19DEB80700DBA058 /* PaddleBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaddleBoard.h; path = GameObjects/PaddleBoard.h; sourceTree = "<group>"; };
-		F5695D1E19DEB80700DBA058 /* PaddleBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaddleBoard.m; path = GameObjects/PaddleBoard.m; sourceTree = "<group>"; };
-		F5695D2019DEB91C00DBA058 /* BallObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BallObject.h; path = GameObjects/BallObject.h; sourceTree = "<group>"; };
-		F5695D2119DEB91C00DBA058 /* BallObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BallObject.m; path = GameObjects/BallObject.m; sourceTree = "<group>"; };
 		F5695D2319DECD5C00DBA058 /* HUPongGameObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HUPongGameObject.h; path = GameObjects/HUPongGameObject.h; sourceTree = "<group>"; };
 		F5695D2419DECD5C00DBA058 /* HUPongGameObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HUPongGameObject.m; path = GameObjects/HUPongGameObject.m; sourceTree = "<group>"; };
 		F5695D2619DED2F500DBA058 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverScene.h; path = Scenes/GameOverScene.h; sourceTree = "<group>"; };
@@ -211,8 +205,6 @@
 		F5695D1719DE962900DBA058 /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				F5695D1D19DEB80700DBA058 /* PaddleBoard.h */,
-				F5695D1E19DEB80700DBA058 /* PaddleBoard.m */,
 			);
 			name = Player;
 			sourceTree = "<group>";
@@ -220,8 +212,6 @@
 		F5695D1819DE963100DBA058 /* Ball */ = {
 			isa = PBXGroup;
 			children = (
-				F5695D2019DEB91C00DBA058 /* BallObject.h */,
-				F5695D2119DEB91C00DBA058 /* BallObject.m */,
 			);
 			name = Ball;
 			sourceTree = "<group>";
@@ -351,10 +341,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5695D2819DED2F600DBA058 /* GameOverScene.m in Sources */,
-				F5695D2219DEB91C00DBA058 /* BallObject.m in Sources */,
 				F54FFEB819DDE948004848EE /* main.m in Sources */,
 				F54FFEBB19DDE948004848EE /* GameScene.m in Sources */,
-				F5695D1F19DEB80700DBA058 /* PaddleBoard.m in Sources */,
 				F54FFEB619DDE948004848EE /* AppDelegate.m in Sources */,
 				F5695D2519DECD5C00DBA058 /* HUPongGameObject.m in Sources */,
 				F5695D2D19DED42B00DBA058 /* MainMenu.m in Sources */,
