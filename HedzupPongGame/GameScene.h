@@ -7,7 +7,18 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "globalConstants.h"
 
-@interface GameScene : SKScene
+//game objects here
+#import "BallObject.h"
+#import "PaddleBoard.h"
 
+@interface GameScene : SKScene <SKPhysicsContactDelegate>
+{
+    
+}
+
+@property (nonatomic,retain) IBOutlet PaddleBoard *playerNode;
+
+ -(void) addFloor;
 @end
