@@ -32,20 +32,24 @@
 -(void) update{
     [super update];
     
-//    /* Called before each frame is rendered */
-//     float speed = sqrt(self.physicsBody.velocity.dx*self.physicsBody.velocity.dx + self.physicsBody.velocity.dy * self.physicsBody.velocity.dy);
-//  //  NSLog(@"speed %f",speed);
-//    if (speed > 500) {
-//        self.physicsBody.linearDamping = 0.4f;
-//    } else {
-//        self.physicsBody.linearDamping = 0.0f;
-//    }
+    //CGFloat rate = .05;
+   // CGVector relativeVelocity = CGVectorMake(200-self.physicsBody.velocity.dx, 200-self.physicsBody.velocity.dy);
+     //self.physicsBody.velocity=CGVectorMake(self.physicsBody.velocity.dx+relativeVelocity.dx*rate, self.physicsBody.velocity.dy+relativeVelocity.dy*rate);
+     float speed = sqrt(self.physicsBody.velocity.dx*self.physicsBody.velocity.dx + self.physicsBody.velocity.dy * self.physicsBody.velocity.dy);
+     if (speed > 500) {
+        self.physicsBody.linearDamping = 0.4f;
+    } else {
+        self.physicsBody.linearDamping = 0.0f;
+     }
 }
 
 -(void) setUpObjectInParent:(SKScene*) parent{
 
     [super setUpObjectInParent:parent];
-    
+
+   srandom(arc4random());
+    int n = random() % 4;  //random between 0 and 4
+  
     self.name = NAME_BALL_CATEGORY;
      self.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:self.frame.size.width/2];
     self.physicsBody.friction = 0.0f;
@@ -55,9 +59,19 @@
     self.physicsBody.usesPreciseCollisionDetection = NO;
     self.physicsBody.categoryBitMask = BALL_BITMASK;
     self.physicsBody.contactTestBitMask = FLOOR_BITMASK | BRICKS_BITMASK;
-    [self.physicsBody applyImpulse:CGVectorMake(2.0f, -2.0f)];
+    [self.physicsBody setAffectedByGravity:NO];
     isActive = true;
-}
+
+    if (n==0)
+        [self.physicsBody applyImpulse:CGVectorMake(-2.4f, -2.2f)];
+     if (n==1)
+        [self.physicsBody applyImpulse:CGVectorMake(2.0f, -2.0f)];
+    if (n==2)
+        [self.physicsBody applyImpulse:CGVectorMake(2.3f, -2.1f)];
+    if (n==3)
+        [self.physicsBody applyImpulse:CGVectorMake(-2.0f, -2.0f)];
+    
+ }
 
 - (void) removeBall
 {

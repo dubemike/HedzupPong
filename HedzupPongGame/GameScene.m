@@ -8,6 +8,8 @@
 
 #import "GameScene.h"
 #import "GameOverScene.h"
+#import "HUPongManager.h"
+#import "HighScores.h"
 
 @implementation GameScene
 
@@ -16,21 +18,24 @@
 
 -(void)didMoveToView:(SKView *)view {
     /* Setup your scene here */
-    self.physicsWorld.gravity = CGVectorMake(0,-0.7f);
+    self.physicsWorld.gravity = CGVectorMake(0,0);
     self.physicsWorld.contactDelegate = self;
     self.backgroundColor = [SKColor blackColor];
     
-    lives = 3;
+    lives = 4;
     currentScore = 0;
  
      //add our player object here
     self.playerNode = [PaddleBoard spriteNodeWithImageNamed: @"white-strip.png"];
-    [self.playerNode setSize:CGSizeMake(150, 35)];
+    [self.playerNode setSize:CGSizeMake(100, 35)];
     [self.playerNode setUpObjectInParent:self];
 
     [self layOutInitialGameWorld];
     
-    
+    // [[HUPongManager sharedInstance] addUserHighScore:@"dubemike@outlook.com" andHighScore:98];
+    // HighScores *currentSavedScore = [[[HUPongManager sharedInstance] getAllUserHighScores] objectAtIndex:0];
+   
+
 }
 
 
@@ -78,11 +83,12 @@
                                       10);
     currentGameTime = TOTALGAMETIME;
     
-    countDownTimer = [NSTimer timerWithTimeInterval:1
-                                             target:self
-                                           selector:@selector(updateGameTime)
-                                           userInfo:nil repeats:YES];
-    [self updateGameTime];
+    id wait = [SKAction waitForDuration:1];
+    id run = [SKAction runBlock:^{
+        [self updateGameTime];
+
+    }];
+    [self runAction:[SKAction repeatActionForever:[SKAction sequence:@[wait, run]]]];
   
     [self addBlocks];
     [self addFloor];
@@ -99,7 +105,7 @@
     }
      [pointsLabel setText:[NSString stringWithFormat:@"%d",currentScore ]];
      pointsLabel.fontSize = 48;
-     pointsLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+    pointsLabel.position =  CGPointMake(self.frame.size.width-200, self.frame.size.height-300);
     
 }
 
@@ -113,7 +119,6 @@
         [self addChild:self.timerLabel];
      }
     
-    NSLog(@"timer %d",currentGameTime);
     
     [timerLabel setText:[NSString stringWithFormat:@"%d",currentGameTime]];
     timerLabel.fontSize = 42;
@@ -134,8 +139,8 @@
    // ball.position = CGPointMake(CGRectGetMidX(self.frame),
      //                           self.frame.size.height-20);
     
-     ball.position = CGPointMake(CGRectGetMidX(self.frame),
-                              CGRectGetMidY(self.frame)+40);
+     ball.position = CGPointMake(CGRectGetMidX(self.playerNode.frame),
+                              self.playerNode.frame.origin.y +80);
 
 }
 
@@ -178,11 +183,11 @@
 
 -(void) addBlocks{
     
-    int numberOfBlocks = 3;
+       
     int blockWidth = [SKSpriteNode spriteNodeWithImageNamed:@"blocks.png"].size.width;
-    float padding = 20.0f;
+    float padding = 2.0f;
     // 2 Calculate the xOffset
-    float xOffset = (self.frame.size.width - (blockWidth * numberOfBlocks + padding * (numberOfBlocks-1))) / 2;
+    float xOffset = (self.frame.size.width - (blockWidth * WORLD_BLOCK_COUNT + padding * (WORLD_BLOCK_COUNT-1))) / 2;
 
     for (int i = 1; i < WORLD_BLOCK_COUNT; i++) {
         BrickObject* block = [BrickObject spriteNodeWithImageNamed:@"blocks.png"];
@@ -216,9 +221,10 @@
     }
     
     if (firstBody.categoryBitMask == BALL_BITMASK && secondBody.categoryBitMask == PLAYER_BITMASK) {
-        //  NSLog(@"Hit bottom.");
-        [self runAction:[SKAction playSoundFileNamed:@"nes-00-01.wav" waitForCompletion:NO]];  //play a sound
-  
+         [self runAction:[SKAction playSoundFileNamed:@"nes-00-01.wav" waitForCompletion:NO]];  //play a sound
+        //give it a little nudge up as well
+       // [firstBody applyImpulse:CGVectorMake(firstBody.velocity.dx, firstBody.velocity.dy + 2.0f)];
+
     }
     
 
@@ -230,8 +236,7 @@
         
         if ([self isGameWon]) {
             [self showGameOverScene:YES];
-
-        }else{
+         }else{
             NSLog(@"DIDNT WIN");
         }
  

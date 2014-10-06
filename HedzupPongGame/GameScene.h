@@ -17,8 +17,7 @@
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
 {
     int lives;
-    NSTimer *countDownTimer;
-    int currentGameTime;
+     int currentGameTime;
  }
 
 @property (nonatomic,retain) IBOutlet PaddleBoard *playerNode;

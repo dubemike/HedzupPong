@@ -10,6 +10,12 @@
 		F50217CF19E27D1C001C9355 /* 8-BIT WONDER.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F50217CE19E27D1C001C9355 /* 8-BIT WONDER.TTF */; };
 		F50217D319E28FE7001C9355 /* nes-14-08.wav in Resources */ = {isa = PBXBuildFile; fileRef = F50217D119E28FE7001C9355 /* nes-14-08.wav */; };
 		F50217D419E28FE7001C9355 /* nes-00-01.wav in Resources */ = {isa = PBXBuildFile; fileRef = F50217D219E28FE7001C9355 /* nes-00-01.wav */; };
+		F50217D919E2A914001C9355 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F50217D719E2A914001C9355 /* Database.xcdatamodeld */; };
+		F50217DD19E2AA7D001C9355 /* HighScores.m in Sources */ = {isa = PBXBuildFile; fileRef = F50217DC19E2AA7D001C9355 /* HighScores.m */; };
+		F50217EA19E2AB9D001C9355 /* ArchiverManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F50217E119E2AB9D001C9355 /* ArchiverManager.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F50217EB19E2AB9D001C9355 /* ArchiverMediator.m in Sources */ = {isa = PBXBuildFile; fileRef = F50217E319E2AB9D001C9355 /* ArchiverMediator.m */; };
+		F50217EC19E2AB9D001C9355 /* PRPBasicDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F50217E519E2AB9D001C9355 /* PRPBasicDataModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F50217F219E2B001001C9355 /* HUPongManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F50217F119E2B001001C9355 /* HUPongManager.m */; };
 		F54FFEB619DDE948004848EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFEB519DDE948004848EE /* AppDelegate.m */; };
 		F54FFEB819DDE948004848EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFEB719DDE948004848EE /* main.m */; };
 		F54FFEBB19DDE948004848EE /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFEBA19DDE948004848EE /* GameScene.m */; };
@@ -42,6 +48,17 @@
 		F50217CE19E27D1C001C9355 /* 8-BIT WONDER.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "8-BIT WONDER.TTF"; sourceTree = "<group>"; };
 		F50217D119E28FE7001C9355 /* nes-14-08.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "nes-14-08.wav"; path = "Assets/sounds/nes-14-08.wav"; sourceTree = "<group>"; };
 		F50217D219E28FE7001C9355 /* nes-00-01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "nes-00-01.wav"; path = "Assets/sounds/nes-00-01.wav"; sourceTree = "<group>"; };
+		F50217D819E2A914001C9355 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
+		F50217DB19E2AA7D001C9355 /* HighScores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HighScores.h; path = CoreData/HighScores.h; sourceTree = "<group>"; };
+		F50217DC19E2AA7D001C9355 /* HighScores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HighScores.m; path = CoreData/HighScores.m; sourceTree = "<group>"; };
+		F50217E019E2AB9D001C9355 /* ArchiverManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiverManager.h; sourceTree = "<group>"; };
+		F50217E119E2AB9D001C9355 /* ArchiverManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiverManager.m; sourceTree = "<group>"; };
+		F50217E219E2AB9D001C9355 /* ArchiverMediator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArchiverMediator.h; sourceTree = "<group>"; };
+		F50217E319E2AB9D001C9355 /* ArchiverMediator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArchiverMediator.m; sourceTree = "<group>"; };
+		F50217E419E2AB9D001C9355 /* PRPBasicDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRPBasicDataModel.h; sourceTree = "<group>"; };
+		F50217E519E2AB9D001C9355 /* PRPBasicDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRPBasicDataModel.m; sourceTree = "<group>"; };
+		F50217F019E2B001001C9355 /* HUPongManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUPongManager.h; sourceTree = "<group>"; };
+		F50217F119E2B001001C9355 /* HUPongManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUPongManager.m; sourceTree = "<group>"; };
 		F54FFEAF19DDE948004848EE /* HedzupPongGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HedzupPongGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54FFEB319DDE948004848EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F54FFEB419DDE948004848EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -92,6 +109,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F50217D619E2A84C001C9355 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				F50217D719E2A914001C9355 /* Database.xcdatamodeld */,
+				F50217DF19E2AB9D001C9355 /* ToolBoxes */,
+				F50217DA19E2A9E3001C9355 /* subClasses */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		F50217DA19E2A9E3001C9355 /* subClasses */ = {
+			isa = PBXGroup;
+			children = (
+				F50217DB19E2AA7D001C9355 /* HighScores.h */,
+				F50217DC19E2AA7D001C9355 /* HighScores.m */,
+			);
+			name = subClasses;
+			sourceTree = "<group>";
+		};
+		F50217DF19E2AB9D001C9355 /* ToolBoxes */ = {
+			isa = PBXGroup;
+			children = (
+				F50217E019E2AB9D001C9355 /* ArchiverManager.h */,
+				F50217E119E2AB9D001C9355 /* ArchiverManager.m */,
+				F50217E219E2AB9D001C9355 /* ArchiverMediator.h */,
+				F50217E319E2AB9D001C9355 /* ArchiverMediator.m */,
+				F50217E419E2AB9D001C9355 /* PRPBasicDataModel.h */,
+				F50217E519E2AB9D001C9355 /* PRPBasicDataModel.m */,
+			);
+			name = ToolBoxes;
+			path = CoreData/coredata;
+			sourceTree = "<group>";
+		};
+		F50217EF19E2B001001C9355 /* SingleTons */ = {
+			isa = PBXGroup;
+			children = (
+				F50217F019E2B001001C9355 /* HUPongManager.h */,
+				F50217F119E2B001001C9355 /* HUPongManager.m */,
+			);
+			path = SingleTons;
+			sourceTree = "<group>";
+		};
 		F54FFEA619DDE948004848EE = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +172,8 @@
 		F54FFEB119DDE948004848EE /* HedzupPongGame */ = {
 			isa = PBXGroup;
 			children = (
+				F50217EF19E2B001001C9355 /* SingleTons */,
+				F50217D619E2A84C001C9355 /* CoreData */,
 				F5695D1219DE825700DBA058 /* Assets */,
 				F5695D1619DE961A00DBA058 /* GameObjects */,
 				F5695D1119DE824900DBA058 /* Scenes */,
@@ -382,9 +443,15 @@
 				F5695D2819DED2F600DBA058 /* GameOverScene.m in Sources */,
 				F5695D3319DED55800DBA058 /* BallObject.m in Sources */,
 				F5695D3219DED55800DBA058 /* PaddleBoard.m in Sources */,
+				F50217EA19E2AB9D001C9355 /* ArchiverManager.m in Sources */,
 				F54FFEB819DDE948004848EE /* main.m in Sources */,
+				F50217F219E2B001001C9355 /* HUPongManager.m in Sources */,
 				F54FFEBB19DDE948004848EE /* GameScene.m in Sources */,
 				F54FFEB619DDE948004848EE /* AppDelegate.m in Sources */,
+				F50217EC19E2AB9D001C9355 /* PRPBasicDataModel.m in Sources */,
+				F50217D919E2A914001C9355 /* Database.xcdatamodeld in Sources */,
+				F50217DD19E2AA7D001C9355 /* HighScores.m in Sources */,
+				F50217EB19E2AB9D001C9355 /* ArchiverMediator.m in Sources */,
 				F5695D2519DECD5C00DBA058 /* HUPongGameObject.m in Sources */,
 				F5695D3919E17F1400DBA058 /* BrickObject.m in Sources */,
 				F5695D2D19DED42B00DBA058 /* MainMenu.m in Sources */,
@@ -592,6 +659,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F50217D719E2A914001C9355 /* Database.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F50217D819E2A914001C9355 /* Database.xcdatamodel */,
+			);
+			currentVersion = F50217D819E2A914001C9355 /* Database.xcdatamodel */;
+			name = Database.xcdatamodeld;
+			path = CoreData/Database.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F54FFEA719DDE948004848EE /* Project object */;
 }

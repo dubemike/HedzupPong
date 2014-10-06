@@ -23,8 +23,8 @@
 
 -(void) update{
  
-    
-}
+    self.physicsBody.linearDamping = 2.9f;
+ }
 
 -(void) setUpObjectInParent:(SKScene*) parent{
     
@@ -36,7 +36,7 @@
     self.physicsBody = [SKPhysicsBody bodyWithRectangleOfSize:CGSizeMake(self.size.width , self.size.height)];
     self.physicsBody.dynamic = YES;
     self.physicsBody.categoryBitMask = PLAYER_BITMASK;
-    self.physicsBody.contactTestBitMask = BALL_BITMASK;
+    self.physicsBody.contactTestBitMask = BALL_BITMASK | FLOOR_BITMASK;
     self.physicsBody.allowsRotation = NO;
     self.physicsBody.restitution = 0.1;
     self.physicsBody.friction = 0.4f;
