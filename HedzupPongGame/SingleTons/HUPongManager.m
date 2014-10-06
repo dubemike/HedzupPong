@@ -41,7 +41,7 @@ static HUPongManager *sharedSingleton_ = nil;
         [soundFiles setObject:[SKAction playSoundFileNamed:SONG_TWO waitForCompletion:NO] forKey:SONG_TWO];
 
         
-    }
+     }
     
     return self;
 }

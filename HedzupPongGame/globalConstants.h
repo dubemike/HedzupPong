@@ -39,24 +39,22 @@
 
 //TEXT
 #define HOME_ENTER_EMAIL_TEXT @"ENTER EMAIL & PRESS ENTER"
-#define NUM_ROWS 6
-#define NUMCOLS 9
 
 #define ENGILISH TRUE
 
-#define VOICE_WELCOME @"chinese_intro.wav"
-//#define VOICE_WELCOME @"british_intro.caf"
-#define VOICE_PRESS_ENTER @"chinese_why_you_no_press_enter.caf"
 
-//#if ENGILISH
-//    #define VOICE_WELCOME @"british_intro.caf"
-//    #define VOICE_PRESS_ENTER @"british_press_enter.caf"
-//
-//#else
-//    #define VOICE_WELCOME @"chinese_intro.wav"
-//    #define VOICE_PRESS_ENTER @"chinese_why_you_no_press_enter.caf"
-//
-//#endif
+
+#if ENGILISH
+    #define VOICE_WELCOME @"british_intro.caf"
+    #define VOICE_PRESS_ENTER @"british_press_enter.caf"
+    #define VOICE_HIGHSCORE @"british_high_score.caf"
+
+#else
+    #define VOICE_WELCOME @"chinese_intro.wav"
+    #define VOICE_PRESS_ENTER @"chinese_why_you_no_press_enter.caf"
+    #define VOICE_HIGHSCORE @"british_high_score.caf"
+
+#endif
 
 #define SONG_ONE @"Magical_8bit_tour_.mp3"
 #define SONG_TWO @"Everything_Is_Awesome.mp3"

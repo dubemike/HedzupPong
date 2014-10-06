@@ -63,7 +63,7 @@
             }
             
              [[HUPongManager sharedInstance] playSoundFilewithName:VOICE_WELCOME fromParentScene:self];
-           
+            
             //add the PLAY NOW LOGO
             SKTexture *playNow = [SKTexture textureWithImageNamed:@"playnow-with-flowers.png"];
             SKSpriteNode *playNowSprite = [SKSpriteNode spriteNodeWithTexture:playNow];
@@ -78,7 +78,10 @@
             
         case ENTER_USERNAME:{
             
-            [[HUPongManager sharedInstance] playSoundFilewithName:VOICE_PRESS_ENTER fromParentScene:self];
+             [[HUPongManager sharedInstance] playSoundFilewithName:VOICE_PRESS_ENTER fromParentScene:self];
+            
+           // [self runAction:[SKAction playSoundFileNamed:@"intro.caf" waitForCompletion:NO]];
+
             SKSpriteNode *playNowSprite = (SKSpriteNode*)[self childNodeWithName:NAME_HOME_PLAY_NOW];
             if (playNowSprite) {
                 [playNowSprite removeFromParent];
