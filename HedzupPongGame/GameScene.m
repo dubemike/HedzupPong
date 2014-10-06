@@ -22,7 +22,7 @@
     self.physicsWorld.contactDelegate = self;
     self.backgroundColor = [SKColor blackColor];
     
-    lives = 4;
+    lives = 14;
     currentScore = 0;
  
      //add our player object here
@@ -285,8 +285,7 @@
     
 }
 -(void) keyDown:(NSEvent *)theEvent{
-    //check the keys for keyboard presses and add a velocity to the player node
-    
+    //check the keys for keyboard presses
     if ([theEvent modifierFlags] & NSNumericPadKeyMask) {
         [self interpretKeyEvents:[NSArray arrayWithObject:theEvent]];
     } else {

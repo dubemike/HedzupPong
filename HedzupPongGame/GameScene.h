@@ -18,6 +18,7 @@
 {
     int lives;
      int currentGameTime;
+    
  }
 
 @property (nonatomic,retain) IBOutlet PaddleBoard *playerNode;

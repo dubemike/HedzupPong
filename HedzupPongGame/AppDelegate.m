@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "GameScene.h"
+#import "MainMenu.h"
 
 @implementation SKScene (Unarchive)
 
@@ -35,7 +36,8 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [self activateFonts];
     
-    GameScene *scene = [GameScene unarchiveFromFile:@"GameScene"];
+   // GameScene *scene = [GameScene unarchiveFromFile:@"GameScene"];
+      MainMenu *scene = [MainMenu unarchiveFromFile:@"MainMenu"];
 
     /* Set the scale mode to scale to fit the window */
     scene.scaleMode = SKSceneScaleModeAspectFit;
@@ -53,6 +55,11 @@
     return YES;
 }
 
+-(void) keyDown:(NSEvent *)theEvent{
+    //escape keycode is 53, and enter is 36
+    // Arrow keys are associated with the numeric keypad
+    [self interpretKeyEvents:[NSArray arrayWithObject:theEvent]];
+ }
 
 -(void) activateFonts
 {

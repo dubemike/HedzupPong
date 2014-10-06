@@ -18,9 +18,10 @@ typedef enum  {
 @interface GameOverScene : SKScene
 {
     GAMEOVER gameOverStatus;
+    int currentGameTime ;
 }
 
-
+@property (nonatomic) SKLabelNode* gameOverLabelTimer;
 -(id)initWithSize:(CGSize)size playerWon:(BOOL)isWon;
 
 @end

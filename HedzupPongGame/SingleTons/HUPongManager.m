@@ -7,6 +7,7 @@
 //
 
 #import "HUPongManager.h"
+#import "globalConstants.h"
 
 
 
@@ -30,12 +31,27 @@ static HUPongManager *sharedSingleton_ = nil;
         
         meddClass = [[ArchiverMediator alloc] init];
         
+        //set up our sound files for preloading
+        
+        soundFiles = [[NSMutableDictionary alloc] init];
+        
+        [soundFiles setObject:[SKAction playSoundFileNamed:VOICE_WELCOME waitForCompletion:NO] forKey:VOICE_WELCOME];
+        [soundFiles setObject:[SKAction playSoundFileNamed:VOICE_PRESS_ENTER waitForCompletion:NO] forKey:VOICE_PRESS_ENTER];
+        [soundFiles setObject:[SKAction playSoundFileNamed:SONG_ONE waitForCompletion:NO] forKey:SONG_ONE];
+        [soundFiles setObject:[SKAction playSoundFileNamed:SONG_TWO waitForCompletion:NO] forKey:SONG_TWO];
+
+        
     }
     
     return self;
 }
 
 
+-(void) playSoundFilewithName:(NSString*) name fromParentScene:(SKScene*) scene
+{
+    [scene runAction:[soundFiles objectForKey:name]];  //play a sound
+
+}
 
 
 -(void) addUserHighScore:(NSString*) userName andHighScore:(int) score{

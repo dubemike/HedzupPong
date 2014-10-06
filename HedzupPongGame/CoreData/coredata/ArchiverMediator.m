@@ -131,7 +131,10 @@
     HighScores *currentUserScore = [self getUserWithId:[data objectForKey:@"userName"] InContext:ctx];
     
     if (currentUserScore) {
-        [currentUserScore safeSetValuesForKeysWithDictionary:data dateFormatter:df];
+        //highscore, only save it if its higher than the current score
+        if ([currentUserScore.score integerValue] < [[data valueForKey:@"score"] integerValue]) {
+            [currentUserScore safeSetValuesForKeysWithDictionary:data dateFormatter:df];
+         }
 
     }else{
         HighScores *newUserAccount = [[HighScores alloc] initWithEntity: [NSEntityDescription entityForName:@"HighScores" inManagedObjectContext:ctx] insertIntoManagedObjectContext:ctx];

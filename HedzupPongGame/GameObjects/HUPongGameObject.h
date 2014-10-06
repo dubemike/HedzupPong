@@ -9,7 +9,10 @@
 #import <SpriteKit/SpriteKit.h>
 
 @interface HUPongGameObject : SKSpriteNode
-
+{
+    
+    
+}
 -(void) setUpObjectInParent:(SKScene*) parent;
 -(void) update;
 @end

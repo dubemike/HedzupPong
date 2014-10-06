@@ -7,12 +7,14 @@
 
 #import <Foundation/Foundation.h>
 #import "ArchiverMediator.h"
+#import <SpriteKit/SpriteKit.h>
 
 
 @interface HUPongManager : NSObject
 {
     ArchiverMediator *meddClass;
-     
+    NSMutableDictionary *soundFiles;
+
 }
 
 + (HUPongManager *) sharedInstance;
@@ -24,4 +26,6 @@
 //user accounts
 -(void) addUserHighScore:(NSString*) userName andHighScore:(int) score;
 -(NSArray*) getAllUserHighScores;
+-(void) playSoundFilewithName:(NSString*) name fromParentScene:(SKScene*) scene;
+
 @end

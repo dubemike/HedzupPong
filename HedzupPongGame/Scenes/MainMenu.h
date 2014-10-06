@@ -11,12 +11,21 @@
 typedef enum  {
     
     PLAYGAME = 0,
-    EXITGAME = 1
+    ENTER_USERNAME =1,
+    START_GAME = 2,
+    EXITGAME = 3
     
 } MENUSTATE;
 
 @interface MainMenu : SKScene
 {
     MENUSTATE currentState;
+    NSString *currentTypedText;
 }
+
+@property (nonatomic)  SKLabelNode* userNameLabel;
+
+-(void)  setStateForView:(MENUSTATE) state;
+- (BOOL)validateEmailWithString:(NSString*)email;
+
 @end
