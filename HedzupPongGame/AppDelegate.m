@@ -33,6 +33,8 @@
 @synthesize window = _window;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
+    [self activateFonts];
+    
     GameScene *scene = [GameScene unarchiveFromFile:@"GameScene"];
 
     /* Set the scale mode to scale to fit the window */
@@ -50,5 +52,35 @@
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
     return YES;
 }
+
+
+-(void) activateFonts
+{
+    NSString *fontFilePath =[[NSBundle mainBundle] resourcePath] ;
+    
+    NSURL *fontsURL = [NSURL fileURLWithPath:fontFilePath];
+    
+    if(fontsURL != nil)
+    {
+        
+        OSStatus status;
+        FSRef fsRef;
+        CFURLGetFSRef((CFURLRef)fontsURL, &fsRef);
+        
+        status=ATSFontActivateFromFileReference(&fsRef, kATSFontContextLocal, kATSFontFormatUnspecified,NULL, kATSOptionFlagsDefault, NULL);
+        
+        if (status != noErr)
+        {
+            NSLog(@"Failed to acivate fonts! %d",status);
+        }else{
+            NSLog(@"Successfully Activated Font's");
+            
+        }
+        
+        
+    }
+}
+
+
 
 @end

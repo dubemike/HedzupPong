@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F50217CF19E27D1C001C9355 /* 8-BIT WONDER.TTF in Resources */ = {isa = PBXBuildFile; fileRef = F50217CE19E27D1C001C9355 /* 8-BIT WONDER.TTF */; };
+		F50217D319E28FE7001C9355 /* nes-14-08.wav in Resources */ = {isa = PBXBuildFile; fileRef = F50217D119E28FE7001C9355 /* nes-14-08.wav */; };
+		F50217D419E28FE7001C9355 /* nes-00-01.wav in Resources */ = {isa = PBXBuildFile; fileRef = F50217D219E28FE7001C9355 /* nes-00-01.wav */; };
 		F54FFEB619DDE948004848EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFEB519DDE948004848EE /* AppDelegate.m */; };
 		F54FFEB819DDE948004848EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFEB719DDE948004848EE /* main.m */; };
 		F54FFEBB19DDE948004848EE /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFEBA19DDE948004848EE /* GameScene.m */; };
@@ -19,6 +22,10 @@
 		F5695D2519DECD5C00DBA058 /* HUPongGameObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F5695D2419DECD5C00DBA058 /* HUPongGameObject.m */; };
 		F5695D2819DED2F600DBA058 /* GameOverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F5695D2719DED2F500DBA058 /* GameOverScene.m */; };
 		F5695D2D19DED42B00DBA058 /* MainMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = F5695D2C19DED42B00DBA058 /* MainMenu.m */; };
+		F5695D3219DED55800DBA058 /* PaddleBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = F5695D2E19DED55800DBA058 /* PaddleBoard.m */; };
+		F5695D3319DED55800DBA058 /* BallObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F5695D3119DED55800DBA058 /* BallObject.m */; };
+		F5695D3519E17D0500DBA058 /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = F5695D3419E17D0500DBA058 /* blocks.png */; };
+		F5695D3919E17F1400DBA058 /* BrickObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F5695D3819E17F1400DBA058 /* BrickObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +39,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F50217CE19E27D1C001C9355 /* 8-BIT WONDER.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "8-BIT WONDER.TTF"; sourceTree = "<group>"; };
+		F50217D119E28FE7001C9355 /* nes-14-08.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "nes-14-08.wav"; path = "Assets/sounds/nes-14-08.wav"; sourceTree = "<group>"; };
+		F50217D219E28FE7001C9355 /* nes-00-01.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = "nes-00-01.wav"; path = "Assets/sounds/nes-00-01.wav"; sourceTree = "<group>"; };
 		F54FFEAF19DDE948004848EE /* HedzupPongGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HedzupPongGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54FFEB319DDE948004848EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F54FFEB419DDE948004848EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -55,6 +65,13 @@
 		F5695D2719DED2F500DBA058 /* GameOverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GameOverScene.m; path = Scenes/GameOverScene.m; sourceTree = "<group>"; };
 		F5695D2B19DED42B00DBA058 /* MainMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MainMenu.h; path = Scenes/MainMenu.h; sourceTree = "<group>"; };
 		F5695D2C19DED42B00DBA058 /* MainMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainMenu.m; path = Scenes/MainMenu.m; sourceTree = "<group>"; };
+		F5695D2E19DED55800DBA058 /* PaddleBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PaddleBoard.m; path = GameObjects/PaddleBoard.m; sourceTree = "<group>"; };
+		F5695D2F19DED55800DBA058 /* PaddleBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PaddleBoard.h; path = GameObjects/PaddleBoard.h; sourceTree = "<group>"; };
+		F5695D3019DED55800DBA058 /* BallObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BallObject.h; path = GameObjects/BallObject.h; sourceTree = "<group>"; };
+		F5695D3119DED55800DBA058 /* BallObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BallObject.m; path = GameObjects/BallObject.m; sourceTree = "<group>"; };
+		F5695D3419E17D0500DBA058 /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Assets/blocks.png; sourceTree = "<group>"; };
+		F5695D3719E17F1400DBA058 /* BrickObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BrickObject.h; path = GameObjects/BrickObject.h; sourceTree = "<group>"; };
+		F5695D3819E17F1400DBA058 /* BrickObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BrickObject.m; path = GameObjects/BrickObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,8 +120,6 @@
 				F5695D1519DE875300DBA058 /* globalConstants.h */,
 				F54FFEB419DDE948004848EE /* AppDelegate.h */,
 				F54FFEB519DDE948004848EE /* AppDelegate.m */,
-				F54FFEB919DDE948004848EE /* GameScene.h */,
-				F54FFEBA19DDE948004848EE /* GameScene.m */,
 				F54FFEBC19DDE948004848EE /* GameScene.sks */,
 				F54FFEBE19DDE948004848EE /* Images.xcassets */,
 				F54FFEC019DDE948004848EE /* MainMenu.xib */,
@@ -143,6 +158,8 @@
 			isa = PBXGroup;
 			children = (
 				F5695D2A19DED40100DBA058 /* GameOver */,
+				F54FFEB919DDE948004848EE /* GameScene.h */,
+				F54FFEBA19DDE948004848EE /* GameScene.m */,
 			);
 			name = MainGame;
 			sourceTree = "<group>";
@@ -178,6 +195,7 @@
 		F5695D1319DE826900DBA058 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F5695D3419E17D0500DBA058 /* blocks.png */,
 				F5695D1B19DEA45200DBA058 /* ball.png */,
 				F5695D1919DE97A000DBA058 /* white-strip.png */,
 			);
@@ -187,6 +205,8 @@
 		F5695D1419DE827000DBA058 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				F50217D119E28FE7001C9355 /* nes-14-08.wav */,
+				F50217D219E28FE7001C9355 /* nes-00-01.wav */,
 			);
 			name = Sounds;
 			sourceTree = "<group>";
@@ -196,6 +216,7 @@
 			children = (
 				F5695D2319DECD5C00DBA058 /* HUPongGameObject.h */,
 				F5695D2419DECD5C00DBA058 /* HUPongGameObject.m */,
+				F5695D3619E17EC600DBA058 /* bricks */,
 				F5695D1819DE963100DBA058 /* Ball */,
 				F5695D1719DE962900DBA058 /* Player */,
 			);
@@ -205,6 +226,8 @@
 		F5695D1719DE962900DBA058 /* Player */ = {
 			isa = PBXGroup;
 			children = (
+				F5695D2F19DED55800DBA058 /* PaddleBoard.h */,
+				F5695D2E19DED55800DBA058 /* PaddleBoard.m */,
 			);
 			name = Player;
 			sourceTree = "<group>";
@@ -212,6 +235,8 @@
 		F5695D1819DE963100DBA058 /* Ball */ = {
 			isa = PBXGroup;
 			children = (
+				F5695D3019DED55800DBA058 /* BallObject.h */,
+				F5695D3119DED55800DBA058 /* BallObject.m */,
 			);
 			name = Ball;
 			sourceTree = "<group>";
@@ -219,6 +244,7 @@
 		F5695D2919DED33600DBA058 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				F50217CE19E27D1C001C9355 /* 8-BIT WONDER.TTF */,
 			);
 			name = Fonts;
 			sourceTree = "<group>";
@@ -230,6 +256,15 @@
 				F5695D2719DED2F500DBA058 /* GameOverScene.m */,
 			);
 			name = GameOver;
+			sourceTree = "<group>";
+		};
+		F5695D3619E17EC600DBA058 /* bricks */ = {
+			isa = PBXGroup;
+			children = (
+				F5695D3719E17F1400DBA058 /* BrickObject.h */,
+				F5695D3819E17F1400DBA058 /* BrickObject.m */,
+			);
+			name = bricks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -320,9 +355,13 @@
 			files = (
 				F54FFEBD19DDE948004848EE /* GameScene.sks in Resources */,
 				F5695D1C19DEA45200DBA058 /* ball.png in Resources */,
+				F50217CF19E27D1C001C9355 /* 8-BIT WONDER.TTF in Resources */,
 				F54FFEBF19DDE948004848EE /* Images.xcassets in Resources */,
 				F5695D1A19DE97A000DBA058 /* white-strip.png in Resources */,
 				F54FFEC219DDE948004848EE /* MainMenu.xib in Resources */,
+				F50217D319E28FE7001C9355 /* nes-14-08.wav in Resources */,
+				F5695D3519E17D0500DBA058 /* blocks.png in Resources */,
+				F50217D419E28FE7001C9355 /* nes-00-01.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,10 +380,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5695D2819DED2F600DBA058 /* GameOverScene.m in Sources */,
+				F5695D3319DED55800DBA058 /* BallObject.m in Sources */,
+				F5695D3219DED55800DBA058 /* PaddleBoard.m in Sources */,
 				F54FFEB819DDE948004848EE /* main.m in Sources */,
 				F54FFEBB19DDE948004848EE /* GameScene.m in Sources */,
 				F54FFEB619DDE948004848EE /* AppDelegate.m in Sources */,
 				F5695D2519DECD5C00DBA058 /* HUPongGameObject.m in Sources */,
+				F5695D3919E17F1400DBA058 /* BrickObject.m in Sources */,
 				F5695D2D19DED42B00DBA058 /* MainMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

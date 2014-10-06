@@ -17,7 +17,6 @@ typedef enum  {
 
 @interface MainMenu : SKScene
 {
-
     MENUSTATE currentState;
 }
 @end

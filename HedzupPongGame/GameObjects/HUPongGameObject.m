@@ -13,10 +13,11 @@
 -(void) setUpObjectInParent:(SKScene*) parent{
     
     [parent addChild:self];
-
     
 }
 
-
+-(void) update
+{
+ }
 
 @end

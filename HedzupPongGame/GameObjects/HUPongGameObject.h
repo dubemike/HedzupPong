@@ -11,5 +11,5 @@
 @interface HUPongGameObject : SKSpriteNode
 
 -(void) setUpObjectInParent:(SKScene*) parent;
-
+-(void) update;
 @end

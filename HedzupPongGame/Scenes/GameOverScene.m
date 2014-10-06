@@ -14,7 +14,7 @@
     self = [super initWithSize:size];
     
     if (self) {
-        SKSpriteNode* background = [SKSpriteNode spriteNodeWithImageNamed:@"bg.png"];
+        SKSpriteNode* background = [SKSpriteNode spriteNodeWithColor:[SKColor blackColor] size:size];
         background.position = CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
         [self addChild:background];
         
@@ -33,5 +33,12 @@
     }
     return self;
 }
+
+
+-(void) keyDown:(NSEvent *)theEvent{
+    //any key press will take you back to the main menu screen?
+    
+}
+
 
 @end
