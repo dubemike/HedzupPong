@@ -93,13 +93,14 @@
         case ENTER_USERNAME:{
             
             [self removeAllActions];
+
              SKSpriteNode *playNowSprite = (SKSpriteNode*)[self childNodeWithName:NAME_HOME_PLAY_NOW];
             if (playNowSprite) {
                 [playNowSprite removeAllActions];
                 [playNowSprite removeFromParent];
              }
             [self layoutEnterUserName];
-            
+
 
         } break;
             
@@ -130,14 +131,7 @@
 
 #pragma mark Layout Options
 -(void) layoutEnterUserName{
-    //lets show
-    if (!userNameLabel) {
-             self.userNameLabel =  [SKLabelNode labelNodeWithFontNamed:@"Half Bold Pixel-7"];
-        [self.userNameLabel setFontColor:[NSColor blackColor]];
-            [self addChild:self.userNameLabel];
-            userNameLabel.fontSize = 27;
-        [self.userNameLabel setText:HOME_ENTER_EMAIL_TEXT];
-     }
+ 
     
     
     SKTexture *playNow = [SKTexture textureWithImageNamed:@"emial-box-plain.png"];
@@ -148,6 +142,15 @@
     playNowSprite.yScale = 0.5;
     [self addChild:playNowSprite];
     
+    //lets show
+    if (!userNameLabel) {
+        self.userNameLabel =  [SKLabelNode labelNodeWithFontNamed:@"Half Bold Pixel-7"];
+        [self.userNameLabel setFontColor:[NSColor blackColor]];
+        [self addChild:self.userNameLabel];
+        userNameLabel.fontSize = 27;
+        [self.userNameLabel setText:HOME_ENTER_EMAIL_TEXT];
+    }
+    self.userNameLabel.zPosition = 100;
     [[HUPongManager sharedInstance] playSoundFilewithName:VOICE_PRESS_ENTER fromParentNode:playNowSprite];
 
     self.userNameLabel.position = CGPointMake(CGRectGetMidX(self.frame), playNowSprite.position.y -  10); ;

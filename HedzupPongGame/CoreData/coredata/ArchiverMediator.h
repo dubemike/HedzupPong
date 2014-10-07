@@ -28,4 +28,6 @@
 - (void)mergeChanges:(NSNotification *)notification;
 //user acounts
 -(void) addUserHighScore:(NSDictionary*) data;
+-(void) saveToPlist: (NSArray*) array;
+
 @end

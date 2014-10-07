@@ -14,37 +14,47 @@
 @implementation GameScene
 
 //synthesizers
-@synthesize playerNode,currentScore,pointsLabel,leaderBoardImage,timerLabel,currentUserName;
+@synthesize playerNode,currentScore,pointsLabel,leaderBoardImage,isInvuln,timerLabel,currentUserName,pointScoreOnScreen;
 
 -(void)didMoveToView:(SKView *)view {
     /* Setup your scene here */
     self.physicsWorld.gravity = CGVectorMake(0,0);
     self.physicsWorld.contactDelegate = self;
     self.backgroundColor = COLOR_HU_LIGHT_BLUE;
-    
-    lives = 2;
+    gameOverNow = FALSE;
+    isInvuln = false;
+    lives = 3;
     currentScore = 0;
- 
+    invulnTime = 0;
+    
+  
+    
      //add our player object here
     self.playerNode = [PaddleBoard spriteNodeWithImageNamed: @"white-strip.png"];
-    [self.playerNode setSize:CGSizeMake(100, 22)]; //35
+    [self.playerNode setSize:CGSizeMake(83, 27)]; //H35 W:83
+    //    [self.playerNode setSize:CGSizeMake(83, 19)]; //H35 W:83
+
     [self.playerNode setUpObjectInParent:self];
     leaderBoardScores = [[NSArray alloc] initWithArray:[[HUPongManager sharedInstance] getAllUserHighScores]] ;
     [self layOutInitialGameWorld];
     
     
     //show are u ready stuff
-    SKLabelNode *pointScore = [SKLabelNode labelNodeWithFontNamed:@"8BIT WONDER"];
-    [pointScore setText:@"!!!!GET READY!!!!"];
-    [pointScore setName:NAME_UPDATE_SCREEN_TEXT];
-     pointScore.fontSize = 48;
-     pointScore.position = CGPointMake(CGRectGetMidX(self.frame)-130, CGRectGetMidY(self.frame)-250);
-
-    [self addChild:pointScore];
     
-     SKAction * waitOne = [SKAction waitForDuration:3];
+    if (!pointScoreOnScreen) {
+        pointScoreOnScreen   = [SKLabelNode labelNodeWithFontNamed:@"8BIT WONDER"];
+        pointScoreOnScreen.fontSize = 48;
+        pointScoreOnScreen.position = CGPointMake(CGRectGetMidX(self.frame)-130, CGRectGetMidY(self.frame)-250);
+        
+    }
+    if (!self.pointScoreOnScreen.parent) {
+        [self addChild:pointScoreOnScreen];
+    }
+    [pointScoreOnScreen setText:@"!!!!GET READY!!!!"];
+
+      SKAction * waitOne = [SKAction waitForDuration:3];
      SKAction * actionMoveDone = [SKAction removeFromParent];
-     [pointScore runAction:[SKAction sequence:@[waitOne, actionMoveDone]]];
+     [pointScoreOnScreen runAction:[SKAction sequence:@[waitOne, actionMoveDone]]];
   
     
     
@@ -66,6 +76,17 @@
     if (self.paused)
         return;
    
+    if(self.isInvuln== TRUE){
+        invulnTime += currentTime;
+    }
+    
+    if (invulnTime > 3) {
+        isInvuln = FALSE;
+        invulnTime= 0;
+
+    }
+    
+    
     for (SKNode* node in self.children) {
         if ([node isKindOfClass: [HUPongGameObject class]]) {
              HUPongGameObject* gameObject = (HUPongGameObject*) node;
@@ -74,22 +95,20 @@
     }
     
     
-   
-    
     
 }
 
 
 #pragma mark - game logic
 -(void) userDidDie{
-     if (lives ==0) {
+     if (lives <=0) {
         [self showGameOverScene:NO];
     }
 }
 
-
 -(void) showGameOverScene:(BOOL) iWon{
-   
+    gameOverNow = TRUE;
+    
     GameOverScene* gameOverScene = [[GameOverScene alloc] initWithSize:self.frame.size playerWon:iWon withScore:currentScore andUserEmail:self.currentUserName];
      [self.view presentScene:gameOverScene];
     
@@ -114,7 +133,6 @@
   
     [self addBlocks];
     [self addFloor];
-    //[self addBall];
     [self updateCurrentScore];
  
 }
@@ -133,7 +151,10 @@
          [self addChild:pointsText];
  
     }
-    
+     if (currentScore>999) {
+        pointsLabel.fontSize =60 ;
+ 
+    }
      [pointsLabel setText:[NSString stringWithFormat:@"%d",currentScore ]];
      pointsLabel.position =  CGPointMake(self.frame.size.width-150, self.frame.size.height-285);
      [self.pointsLabel setFontColor:COLOR_HU_PINK];
@@ -210,7 +231,12 @@
 
 -(void) updateGameTime{
     //our countdown is called every second
-  //  currentGameTime --;
+    if (gameOverNow) {
+        return;
+    }
+    
+ 
+    
     
     //dont derecese the time when there is no ball on the screen
     BallObject* ball = (BallObject*)[self childNodeWithName:NAME_BALL_CATEGORY];
@@ -237,11 +263,7 @@
 
     if (currentGameTime ==0) {
         
-        SKSpriteNode *toRemove = (SKSpriteNode*)[self childNodeWithName:NAME_UPDATE_SCREEN_TEXT];
-        if (toRemove) {
-            [toRemove removeAllActions];
-            [toRemove removeFromParent];
-        }
+     
         
          BallObject* ball = (BallObject*)[self childNodeWithName:NAME_BALL_CATEGORY];
         if (ball) {
@@ -250,20 +272,25 @@
         }
         
         //gets called once
-        SKLabelNode *pointScore = [SKLabelNode labelNodeWithFontNamed:@"8BIT WONDER"];
-        pointScore.fontSize = 48;
-        pointScore.position = CGPointMake(CGRectGetMidX(self.frame)-130, CGRectGetMidY(self.frame)-250);
-        [pointScore setText:@"!!YOUR TIME IS UP!!"];
-        [pointScore setName:NAME_UPDATE_SCREEN_TEXT];
-
-        [self addChild:pointScore];
+        if (!pointScoreOnScreen) {
+            pointScoreOnScreen   = [SKLabelNode labelNodeWithFontNamed:@"8BIT WONDER"];
+            pointScoreOnScreen.fontSize = 48;
+            pointScoreOnScreen.position = CGPointMake(CGRectGetMidX(self.frame)-130, CGRectGetMidY(self.frame)-250);
+            
+        }
+        if (!self.pointScoreOnScreen.parent) {
+            [self addChild:pointScoreOnScreen];
+        }
+          [pointScoreOnScreen setText:@"!!YOUR TIME IS UP!!"];
+ 
         
         SKAction * waitOne = [SKAction waitForDuration:3];
         SKAction * actionMoveDone = [SKAction removeFromParent];
-        [pointScore runAction:[SKAction sequence:@[waitOne, actionMoveDone]]];
+        [pointScoreOnScreen runAction:[SKAction sequence:@[waitOne, actionMoveDone]]];
     
          id wait =  wait = [SKAction waitForDuration:3.2];
-        
+         gameOverNow = TRUE;
+
         id runGame = [SKAction runBlock:^{
             [self showGameOverScene:YES];
 
@@ -278,6 +305,17 @@
 }
 
 -(void) addBall {
+    if (gameOverNow) {
+        return;
+    }
+    int found = 0;
+    for (SKNode* node in self.children) {
+        if ([node.name isEqual: NAME_BALL_CATEGORY]) {
+            return; //dont add balls if they already exist
+        }
+    }
+    
+    
     BallObject* ball = [BallObject spriteNodeWithImageNamed: @"ball.png"];
     [ball setUpObjectInParent:self];
     ball.tag = lives;
@@ -420,8 +458,8 @@
         
     }
     
-      xOffset =  (padding + blockWidth -30)*3.5;
-      yOffset = (self.frame.size.height * 0.9f)/1.2;
+      xOffset =  (padding + blockWidth -30)*3.1;
+      yOffset = (self.frame.size.height * 0.9f)/1.15;
 
     //Middle Under the floor
     for (int i = 1; i < 5; i++) {
@@ -550,54 +588,67 @@
         secondBody = contact.bodyA;
     }
     // 3 react to the contact between ball and bottom
-    if (firstBody.categoryBitMask == BALL_BITMASK && secondBody.categoryBitMask == FLOOR_BITMASK) {
-          [firstBody.node removeFromParent];  //means
+    if (firstBody.categoryBitMask == BALL_BITMASK && secondBody.categoryBitMask == FLOOR_BITMASK && !self.isInvuln) {
+        firstBody.categoryBitMask =BALL_BITMASK;
+        [firstBody.node removeFromParent];  //means
+
         
-        SKSpriteNode *toRemove = (SKSpriteNode*)[self childNodeWithName:NAME_UPDATE_SCREEN_TEXT];
-        if (toRemove) {
-            [toRemove removeAllActions];
-            [toRemove removeFromParent];
+       
+        if (lives<0) {
+            return;
+        }
+         isInvuln = TRUE;
+        lives--;
+       // NSLog(@"lives are %d",lives);
+        //show are u ready stuff
+        if (!pointScoreOnScreen) {
+            pointScoreOnScreen   = [SKLabelNode labelNodeWithFontNamed:@"8BIT WONDER"];
+            pointScoreOnScreen.fontSize = 48;
+            pointScoreOnScreen.position = CGPointMake(CGRectGetMidX(self.frame)-130, CGRectGetMidY(self.frame)-250);
+            
+         }
+        
+        if (!self.pointScoreOnScreen.parent) {
+             [self addChild:pointScoreOnScreen];
         }
         
-        lives--;
-        NSLog(@"lives are %d",lives);
-        //show are u ready stuff
-        SKLabelNode *pointScore = [SKLabelNode labelNodeWithFontNamed:@"8BIT WONDER"];
-        pointScore.fontSize = 48;
-        pointScore.position = CGPointMake(CGRectGetMidX(self.frame)-130, CGRectGetMidY(self.frame)-250);
-        
-        [self addChild:pointScore];
         
         SKAction * waitOne = [SKAction waitForDuration:3];
         SKAction * actionMoveDone = [SKAction removeFromParent];
-        [pointScore runAction:[SKAction sequence:@[waitOne, actionMoveDone]]];
+        [pointScoreOnScreen runAction:[SKAction sequence:@[waitOne, actionMoveDone]]];
         
         [[HUPongManager sharedInstance] playSoundFilewithName:VOICE_HEDZUP fromParentScene:self];
         
         id wait = nil;
+        
+        if (lives==2) {
+            [pointScoreOnScreen setText:@"!2 Chances LEFT!"];
+            wait = [SKAction waitForDuration:3.2];
+            
+        }
+        
         if (lives==1) {
-            [pointScore setText:@"!!!LAST CHANCE!!!"];
+            [pointScoreOnScreen setText:@"!!!LAST CHANCE!!!"];
              wait = [SKAction waitForDuration:3.2];
 
          }
         
         if (lives<=0) {
             //play death music etc
-            [pointScore setText:@"!!GAME OVER!!"];
+            [pointScoreOnScreen setText:@"!!GAME OVER!!"];
              wait = [SKAction waitForDuration:5.2];
-
-             
+            
             SKLabelNode *myScore = [SKLabelNode labelNodeWithFontNamed:@"8BIT WONDER"];
             myScore.fontSize = 48;
             myScore.position = CGPointMake(CGRectGetMidX(self.frame)-130, CGRectGetMidY(self.frame)-250);
-            
-
-        }
+         }
  
         id runGame = [SKAction runBlock:^{
                [self userDidDie];
                [self addBall];
         }];
+        
+        currentGameTime = TOTALGAMETIME; //reset the time
         
         [self runAction:[SKAction sequence:@[wait, runGame]]];
         
@@ -678,7 +729,7 @@
 }
 
  -(void)mouseDown:(NSEvent *)theEvent {
-     [self addBall];
+    // [self addBall];
      
    //  [self setPaused:YES];
  }

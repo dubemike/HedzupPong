@@ -96,7 +96,19 @@ static HUPongManager *sharedSingleton_ = nil;
     NSSortDescriptor *highToLow = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:FALSE];
 
     NSArray *allUSers = [[[NSArray alloc] initWithArray:[HighScores findAllObjectsInContext:[self getManagedObjectContextForUse]]] sortedArrayUsingDescriptors:[NSArray arrayWithObject:highToLow]] ;
-     
+    
+    NSMutableArray *dictsToSave = [[NSMutableArray alloc] init];
+    for (HighScores *score in allUSers) {
+       
+        NSMutableDictionary *data = [[NSMutableDictionary alloc] init];
+        [data setValue:score.userName forKey:@"email"];
+        [data setValue:[score.score  stringValue] forKey:@"highScore"];
+        [data setValue:[score.numberOfPlays  stringValue] forKey:@"numberOfPlays"];
+        
+        [dictsToSave addObject:data];
+    }
+    
+    [meddClass saveToPlist:dictsToSave];
     return allUSers;
     
  }

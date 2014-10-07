@@ -54,8 +54,7 @@
     [self runAction:[SKAction playSoundFileNamed:SOUNDEFFECT_BRICK_DIE waitForCompletion:NO]];  //play a sound
     
     
-    NSLog(@"BEFORE %d",hitCount);
-    hitCount--;
+     hitCount--;
 
     srandom(arc4random());
     int moveByYValue = random() % 200;  //random between 0 and 4
@@ -98,10 +97,8 @@
          [pointScore runAction:[SKAction group:@[actionFade,actionGrow, actionMove]]];
          [pointScore runAction:[SKAction sequence:@[wait, actionMoveDone]]];
      
-    NSLog(@"AFTER %d",hitCount);
-    if (hitCount<= 0) {
-        NSLog(@"BRICK IS DEAD");
-        //we dead
+     if (hitCount<= 0) {
+         //we dead
         SKAction * actionFade = [SKAction fadeAlphaTo:0 duration:0.2f];
         SKAction * actionMoveDone = [SKAction removeFromParent];
         isActive = false;

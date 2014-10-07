@@ -22,6 +22,7 @@
      
         currentGameTime = 10;
         self.scoreUserName = email;
+        [self setBackgroundColor:[NSColor blackColor]];
         
         SKTexture *backgroundTexture = [SKTexture textureWithImageNamed:@"game-over-screen-bg"];
         SKSpriteNode *background = [SKSpriteNode spriteNodeWithTexture:backgroundTexture];

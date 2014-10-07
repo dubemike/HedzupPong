@@ -162,9 +162,47 @@
     }];
 
 
-    //export to documents libray
-    
+   
 
+}
+
+-(void) saveToPlist: (NSArray*) array
+{
+    
+    @synchronized(self) {
+        
+        NSData *dataRep;
+        NSString *errorStr = nil;
+        
+         NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDownloadsDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *path = [documentsDirectory stringByAppendingPathComponent:@"HedzUpPongScores.plist"];
+        
+        //serialise the data and save it to file:
+         dataRep = [NSPropertyListSerialization dataFromPropertyList: array
+                   
+                                                             format: NSPropertyListXMLFormat_v1_0
+                   
+                                                   errorDescription: &errorStr];
+        
+        if (dataRep) {
+            [dataRep writeToFile:path atomically:YES];
+            NSLog(@"%@ saved to cache!",@"LOG");
+            
+        } else {
+            NSLog(@"Error writing plist to file '%s', error = '%s'", [path UTF8String], [errorStr UTF8String]);
+             //so we write using nskeyed archiver :D
+            [NSKeyedArchiver archiveRootObject: array toFile: path];
+            
+            
+        }
+        
+    }
+    
+    
+    
+    
+    
 }
 
 
