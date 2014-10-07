@@ -648,9 +648,7 @@
                [self addBall];
         }];
         
-        currentGameTime = TOTALGAMETIME; //reset the time
-        
-        [self runAction:[SKAction sequence:@[wait, runGame]]];
+         [self runAction:[SKAction sequence:@[wait, runGame]]];
         
         
         
