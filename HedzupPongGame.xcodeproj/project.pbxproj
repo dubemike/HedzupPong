@@ -19,6 +19,9 @@
 		F50217F519E2CBB2001C9355 /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = F50217F419E2CBB2001C9355 /* MainMenu.sks */; };
 		F508993519E36932002F11A7 /* FlowerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F508993419E36932002F11A7 /* FlowerObject.m */; };
 		F508993719E36AA9002F11A7 /* british_flower_power.caf in Resources */ = {isa = PBXBuildFile; fileRef = F508993619E36AA9002F11A7 /* british_flower_power.caf */; };
+		F508993A19E3BE97002F11A7 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F508993819E3BE97002F11A7 /* AVFoundation.framework */; };
+		F508993B19E3BE97002F11A7 /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F508993919E3BE97002F11A7 /* AVKit.framework */; };
+		F508993D19E3C5EE002F11A7 /* british_hedzup-1.caf in Resources */ = {isa = PBXBuildFile; fileRef = F508993C19E3C5EE002F11A7 /* british_hedzup-1.caf */; };
 		F54FFEB619DDE948004848EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFEB519DDE948004848EE /* AppDelegate.m */; };
 		F54FFEB819DDE948004848EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFEB719DDE948004848EE /* main.m */; };
 		F54FFEBB19DDE948004848EE /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFEBA19DDE948004848EE /* GameScene.m */; };
@@ -40,7 +43,6 @@
 		F591397019E2E76800C815F2 /* playnow-with-flowers.png in Resources */ = {isa = PBXBuildFile; fileRef = F591396C19E2E76800C815F2 /* playnow-with-flowers.png */; };
 		F591397119E2E76800C815F2 /* ping-pong-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F591396D19E2E76800C815F2 /* ping-pong-logo.png */; };
 		F591397219E2E76800C815F2 /* pong-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F591396E19E2E76800C815F2 /* pong-bg.png */; };
-		F591398319E2E77500C815F2 /* british_hedzup.caf in Resources */ = {isa = PBXBuildFile; fileRef = F591397619E2E77500C815F2 /* british_hedzup.caf */; };
 		F591398819E2E77500C815F2 /* chinese_game_over_go_cry_to_your_friends.caf in Resources */ = {isa = PBXBuildFile; fileRef = F591397B19E2E77500C815F2 /* chinese_game_over_go_cry_to_your_friends.caf */; };
 		F591398919E2E77500C815F2 /* chinese_game_over_try_again.caf in Resources */ = {isa = PBXBuildFile; fileRef = F591397C19E2E77500C815F2 /* chinese_game_over_try_again.caf */; };
 		F591398A19E2E77500C815F2 /* chinese_hedzup.caf in Resources */ = {isa = PBXBuildFile; fileRef = F591397D19E2E77500C815F2 /* chinese_hedzup.caf */; };
@@ -95,6 +97,10 @@
 		F508993319E36932002F11A7 /* FlowerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlowerObject.h; path = GameObjects/FlowerObject.h; sourceTree = "<group>"; };
 		F508993419E36932002F11A7 /* FlowerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlowerObject.m; path = GameObjects/FlowerObject.m; sourceTree = "<group>"; };
 		F508993619E36AA9002F11A7 /* british_flower_power.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = british_flower_power.caf; sourceTree = "<group>"; };
+		F508993819E3BE97002F11A7 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F508993919E3BE97002F11A7 /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		F508993C19E3C5EE002F11A7 /* british_hedzup-1.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "british_hedzup-1.caf"; sourceTree = "<group>"; };
+		F508993E19E3D272002F11A7 /* Database_2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database_2.xcdatamodel; sourceTree = "<group>"; };
 		F54FFEAF19DDE948004848EE /* HedzupPongGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HedzupPongGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54FFEB319DDE948004848EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F54FFEB419DDE948004848EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -130,7 +136,6 @@
 		F591396C19E2E76800C815F2 /* playnow-with-flowers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "playnow-with-flowers.png"; path = "Assets/playnow-with-flowers.png"; sourceTree = "<group>"; };
 		F591396D19E2E76800C815F2 /* ping-pong-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ping-pong-logo.png"; path = "Assets/ping-pong-logo.png"; sourceTree = "<group>"; };
 		F591396E19E2E76800C815F2 /* pong-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pong-bg.png"; path = "Assets/pong-bg.png"; sourceTree = "<group>"; };
-		F591397619E2E77500C815F2 /* british_hedzup.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = british_hedzup.caf; sourceTree = "<group>"; };
 		F591397B19E2E77500C815F2 /* chinese_game_over_go_cry_to_your_friends.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chinese_game_over_go_cry_to_your_friends.caf; sourceTree = "<group>"; };
 		F591397C19E2E77500C815F2 /* chinese_game_over_try_again.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chinese_game_over_try_again.caf; sourceTree = "<group>"; };
 		F591397D19E2E77500C815F2 /* chinese_hedzup.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chinese_hedzup.caf; sourceTree = "<group>"; };
@@ -161,6 +166,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F508993A19E3BE97002F11A7 /* AVFoundation.framework in Frameworks */,
+				F508993B19E3BE97002F11A7 /* AVKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +235,8 @@
 		F54FFEA619DDE948004848EE = {
 			isa = PBXGroup;
 			children = (
+				F508993819E3BE97002F11A7 /* AVFoundation.framework */,
+				F508993919E3BE97002F11A7 /* AVKit.framework */,
 				F54FFEB119DDE948004848EE /* HedzupPongGame */,
 				F54FFECA19DDE949004848EE /* HedzupPongGameTests */,
 				F54FFEB019DDE948004848EE /* Products */,
@@ -417,6 +426,7 @@
 		F591397319E2E77400C815F2 /* Voices */ = {
 			isa = PBXGroup;
 			children = (
+				F508993C19E3C5EE002F11A7 /* british_hedzup-1.caf */,
 				F508993619E36AA9002F11A7 /* british_flower_power.caf */,
 				F5F95C6319E33E7F00D6AD54 /* british_press_enter.caf */,
 				F5F95C5F19E33D3E00D6AD54 /* british_game_over.caf */,
@@ -424,7 +434,6 @@
 				F5F95C5B19E33B2E00D6AD54 /* british_high_score.caf */,
 				F5F95C5919E3381300D6AD54 /* intro.caf */,
 				F5F95C5719E3353300D6AD54 /* chinese_intro.wav */,
-				F591397619E2E77500C815F2 /* british_hedzup.caf */,
 				F591397B19E2E77500C815F2 /* chinese_game_over_go_cry_to_your_friends.caf */,
 				F591397C19E2E77500C815F2 /* chinese_game_over_try_again.caf */,
 				F591397D19E2E77500C815F2 /* chinese_hedzup.caf */,
@@ -550,11 +559,11 @@
 				F5F95C7119E344EC00D6AD54 /* 1.png in Resources */,
 				F5F95C7219E344EC00D6AD54 /* 2.png in Resources */,
 				F5F95C7319E344EC00D6AD54 /* 3.png in Resources */,
+				F508993D19E3C5EE002F11A7 /* british_hedzup-1.caf in Resources */,
 				F591398D19E2E77500C815F2 /* chinese_why_you_no_press_enter.caf in Resources */,
 				F5695D1C19DEA45200DBA058 /* ball.png in Resources */,
 				F5F95C7619E344EC00D6AD54 /* 6.png in Resources */,
 				F508993719E36AA9002F11A7 /* british_flower_power.caf in Resources */,
-				F591398319E2E77500C815F2 /* british_hedzup.caf in Resources */,
 				F5F95C5E19E33CA700D6AD54 /* british_intro.caf in Resources */,
 				F591397019E2E76800C815F2 /* playnow-with-flowers.png in Resources */,
 				F50217CF19E27D1C001C9355 /* 8-BIT WONDER.TTF in Resources */,
@@ -828,9 +837,10 @@
 		F50217D719E2A914001C9355 /* Database.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				F508993E19E3D272002F11A7 /* Database_2.xcdatamodel */,
 				F50217D819E2A914001C9355 /* Database.xcdatamodel */,
 			);
-			currentVersion = F50217D819E2A914001C9355 /* Database.xcdatamodel */;
+			currentVersion = F508993E19E3D272002F11A7 /* Database_2.xcdatamodel */;
 			name = Database.xcdatamodeld;
 			path = CoreData/Database.xcdatamodeld;
 			sourceTree = "<group>";

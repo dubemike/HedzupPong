@@ -31,7 +31,7 @@
         [self addChild:background];
       
        HighScores *highestRecordedScore = [[HUPongManager sharedInstance] getHighestScore];
-        NSLog(@"hiestScore is %@",highestRecordedScore);
+        //NSLog(@"hiestScore is %@",highestRecordedScore);
         
         if (highestRecordedScore) {
         
@@ -46,6 +46,25 @@
             }
         }
         
+        //show the score on screen
+        
+        SKLabelNode* pointsText =  [SKLabelNode labelNodeWithFontNamed:@"8BIT WONDER"];
+        pointsText.fontSize = 41;
+        [pointsText setText:@"Points"];
+        pointsText.position = CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height-435);
+        [self addChild:pointsText];
+        
+    
+        SKLabelNode *pointsLabel =  [SKLabelNode labelNodeWithFontNamed:@"8BIT WONDER"];
+        pointsLabel.fontSize = 95;
+        [self addChild:pointsLabel];
+        
+        [pointsLabel setText:[NSString stringWithFormat:@"%d",currentScore ]];
+        pointsLabel.position =  CGPointMake(CGRectGetMidX(self.frame), self.frame.size.height-385);
+        [pointsLabel setFontColor:COLOR_HU_PINK];
+
+    
+    
         
         if (isWon) {
             gameOverStatus = WON;
@@ -73,8 +92,8 @@
     
     if (!gameOverLabelTimer) {
         gameOverLabelTimer = [SKLabelNode labelNodeWithFontNamed:@"8BIT WONDER"];
-        gameOverLabelTimer.fontSize = 90;
-        gameOverLabelTimer.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame)-50);
+        gameOverLabelTimer.fontSize = 30;//90;
+        gameOverLabelTimer.position = CGPointMake(CGRectGetMidX(self.frame), 50 ); //CGRectGetMidY(self.frame)-50
         [self addChild:gameOverLabelTimer];
     
     }

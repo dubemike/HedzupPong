@@ -41,7 +41,17 @@
 //    SKAction * repeatDown = [SKAction repeatActionForever:deScale];
 //
 //    [logoLarge runAction:[SKAction sequence:@[scale,deScale]]];
-//  
+//
+    
+    srandom(arc4random());
+    int song = random() % 2;
+    if (song==0) {
+        [[HUPongManager sharedInstance] playBackGroundSongWithName:SONG_ONE];
+     
+    }else{
+        [[HUPongManager sharedInstance] playBackGroundSongWithName:SONG_TWO];
+   
+    }
     
     [self setStateForView:currentState];
     

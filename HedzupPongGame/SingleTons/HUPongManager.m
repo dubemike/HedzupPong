@@ -42,9 +42,12 @@ static HUPongManager *sharedSingleton_ = nil;
         [soundFiles setObject:[SKAction playSoundFileNamed:VOICE_FLOWER_POWER waitForCompletion:NO] forKey:VOICE_FLOWER_POWER];
         [soundFiles setObject:[SKAction playSoundFileNamed:SOUNDEFFECT_BALL_PLAYER waitForCompletion:NO] forKey:SOUNDEFFECT_BALL_PLAYER];
         [soundFiles setObject:[SKAction playSoundFileNamed:SOUNDEFFECT_BRICK_DIE waitForCompletion:NO] forKey:SOUNDEFFECT_BRICK_DIE];
+        [soundFiles setObject:[SKAction playSoundFileNamed:VOICE_HEDZUP waitForCompletion:NO] forKey:VOICE_HEDZUP];
+        [soundFiles setObject:[SKAction playSoundFileNamed:SOUNDEFFECT_USER_DIE waitForCompletion:NO] forKey:SOUNDEFFECT_USER_DIE];
 
-        [soundFiles setObject:[SKAction playSoundFileNamed:SONG_ONE waitForCompletion:NO] forKey:SONG_ONE];
-        [soundFiles setObject:[SKAction playSoundFileNamed:SONG_TWO waitForCompletion:NO] forKey:SONG_TWO];
+
+        //[soundFiles setObject:[SKAction playSoundFileNamed:SONG_ONE waitForCompletion:NO] forKey:SONG_ONE];
+        //[soundFiles setObject:[SKAction playSoundFileNamed:SONG_TWO waitForCompletion:NO] forKey:SONG_TWO];
 
         
      }
@@ -52,7 +55,21 @@ static HUPongManager *sharedSingleton_ = nil;
     return self;
 }
 
-
+-(void) playBackGroundSongWithName:(NSString*) name
+{
+    NSError *error;
+    if (player) {
+        [player stop];
+        player = nil;
+    }
+    NSURL *soundURL = [[NSBundle mainBundle] URLForResource:name withExtension:@"mp3"];
+    player = [[AVAudioPlayer alloc] initWithContentsOfURL:soundURL error:&error];
+    [player setVolume:MUSIC_VOLUME];
+    [player prepareToPlay];
+    [player play];
+    [player setNumberOfLoops:-1];  //play untill stopped
+    
+ }
 -(void) playSoundFilewithName:(NSString*) name fromParentScene:(SKScene*) scene
 {
     [scene runAction:[soundFiles objectForKey:name] withKey:name];  //play a sound

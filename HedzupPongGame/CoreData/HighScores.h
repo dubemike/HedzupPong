@@ -14,5 +14,5 @@
 @property (nonatomic, retain) NSString * userName;
 @property (nonatomic, retain) NSNumber * score;
 @property (nonatomic, retain) NSDate * savedDate;
-
+@property (nonatomic, retain) NSNumber *numberOfPlays;
 @end

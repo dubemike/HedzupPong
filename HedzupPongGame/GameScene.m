@@ -27,7 +27,7 @@
  
      //add our player object here
     self.playerNode = [PaddleBoard spriteNodeWithImageNamed: @"white-strip.png"];
-    [self.playerNode setSize:CGSizeMake(100, 35)];
+    [self.playerNode setSize:CGSizeMake(100, 22)]; //35
     [self.playerNode setUpObjectInParent:self];
     leaderBoardScores = [[NSArray alloc] initWithArray:[[HUPongManager sharedInstance] getAllUserHighScores]] ;
     [self layOutInitialGameWorld];
@@ -36,6 +36,7 @@
     //show are u ready stuff
     SKLabelNode *pointScore = [SKLabelNode labelNodeWithFontNamed:@"8BIT WONDER"];
     [pointScore setText:@"!!!!GET READY!!!!"];
+    [pointScore setName:NAME_UPDATE_SCREEN_TEXT];
      pointScore.fontSize = 48;
      pointScore.position = CGPointMake(CGRectGetMidX(self.frame)-130, CGRectGetMidY(self.frame)-250);
 
@@ -81,7 +82,7 @@
 
 #pragma mark - game logic
 -(void) userDidDie{
-     if (lives <=0) {
+     if (lives ==0) {
         [self showGameOverScene:NO];
     }
 }
@@ -104,7 +105,7 @@
                                       10);
     currentGameTime = TOTALGAMETIME;
     
-    id wait = [SKAction waitForDuration:3];
+    id wait = [SKAction waitForDuration:1];
     id run = [SKAction runBlock:^{
         [self updateGameTime];
 
@@ -209,8 +210,14 @@
 
 -(void) updateGameTime{
     //our countdown is called every second
-    currentGameTime --;
-    currentGameTime = currentGameTime <=0 ? 0: currentGameTime;
+  //  currentGameTime --;
+    
+    //dont derecese the time when there is no ball on the screen
+    BallObject* ball = (BallObject*)[self childNodeWithName:NAME_BALL_CATEGORY];
+    if (ball) {
+        currentGameTime --;
+
+    }
     
     if (!self.timerLabel) {
         self.timerLabel =  [SKLabelNode labelNodeWithFontNamed:@"8BIT WONDER"];
@@ -224,13 +231,47 @@
         [self addChild:secondsLabel];
      }
     
-    
-    [timerLabel setText:[NSString stringWithFormat:@"%d",currentGameTime]];
+    [timerLabel setText:[NSString stringWithFormat:@"%d",currentGameTime <=0 ? 0: currentGameTime]];
     timerLabel.fontSize = 95;
     timerLabel.position = CGPointMake(self.frame.size.width-150, self.frame.size.height-120);
 
-    if (currentGameTime <=0) {
-        [self showGameOverScene:YES];
+    if (currentGameTime ==0) {
+        
+        SKSpriteNode *toRemove = (SKSpriteNode*)[self childNodeWithName:NAME_UPDATE_SCREEN_TEXT];
+        if (toRemove) {
+            [toRemove removeAllActions];
+            [toRemove removeFromParent];
+        }
+        
+         BallObject* ball = (BallObject*)[self childNodeWithName:NAME_BALL_CATEGORY];
+        if (ball) {
+            [ball removeAllActions];
+            [ball removeFromParent];
+        }
+        
+        //gets called once
+        SKLabelNode *pointScore = [SKLabelNode labelNodeWithFontNamed:@"8BIT WONDER"];
+        pointScore.fontSize = 48;
+        pointScore.position = CGPointMake(CGRectGetMidX(self.frame)-130, CGRectGetMidY(self.frame)-250);
+        [pointScore setText:@"!!YOUR TIME IS UP!!"];
+        [pointScore setName:NAME_UPDATE_SCREEN_TEXT];
+
+        [self addChild:pointScore];
+        
+        SKAction * waitOne = [SKAction waitForDuration:3];
+        SKAction * actionMoveDone = [SKAction removeFromParent];
+        [pointScore runAction:[SKAction sequence:@[waitOne, actionMoveDone]]];
+    
+         id wait =  wait = [SKAction waitForDuration:3.2];
+        
+        id runGame = [SKAction runBlock:^{
+            [self showGameOverScene:YES];
+
+        }];
+        
+        [self runAction:[SKAction sequence:@[wait, runGame]]];
+       
+        
      }
     
     
@@ -245,7 +286,7 @@
      //                           self.frame.size.height-20);
     
      ball.position = CGPointMake(CGRectGetMidX(self.playerNode.frame),
-                              self.playerNode.frame.origin.y +80);
+                              self.playerNode.frame.origin.y +40);
 
 }
 
@@ -512,6 +553,12 @@
     if (firstBody.categoryBitMask == BALL_BITMASK && secondBody.categoryBitMask == FLOOR_BITMASK) {
           [firstBody.node removeFromParent];  //means
         
+        SKSpriteNode *toRemove = (SKSpriteNode*)[self childNodeWithName:NAME_UPDATE_SCREEN_TEXT];
+        if (toRemove) {
+            [toRemove removeAllActions];
+            [toRemove removeFromParent];
+        }
+        
         lives--;
         NSLog(@"lives are %d",lives);
         //show are u ready stuff
@@ -525,19 +572,30 @@
         SKAction * actionMoveDone = [SKAction removeFromParent];
         [pointScore runAction:[SKAction sequence:@[waitOne, actionMoveDone]]];
         
+        [[HUPongManager sharedInstance] playSoundFilewithName:VOICE_HEDZUP fromParentScene:self];
+        
+        id wait = nil;
         if (lives==1) {
             [pointScore setText:@"!!!LAST CHANCE!!!"];
+             wait = [SKAction waitForDuration:3.2];
+
          }
         
         if (lives<=0) {
             //play death music etc
-            [pointScore setText:@"!!!GAME OVER!!"];
+            [pointScore setText:@"!!GAME OVER!!"];
+             wait = [SKAction waitForDuration:5.2];
+
+             
+            SKLabelNode *myScore = [SKLabelNode labelNodeWithFontNamed:@"8BIT WONDER"];
+            myScore.fontSize = 48;
+            myScore.position = CGPointMake(CGRectGetMidX(self.frame)-130, CGRectGetMidY(self.frame)-250);
+            
 
         }
-        
-        id wait = [SKAction waitForDuration:3.2];
+ 
         id runGame = [SKAction runBlock:^{
-            [self userDidDie];
+               [self userDidDie];
                [self addBall];
         }];
         
@@ -551,9 +609,7 @@
     
     if (firstBody.categoryBitMask == BALL_BITMASK && secondBody.categoryBitMask == PLAYER_BITMASK) {
          [self runAction:[SKAction playSoundFileNamed:@"nes-00-01.wav" waitForCompletion:NO]];  //play a sound
-        //give it a little nudge up as well
-       // [firstBody applyImpulse:CGVectorMake(firstBody.velocity.dx, firstBody.velocity.dy + 2.0f)];
-
+ 
     }
     
 
@@ -584,8 +640,7 @@
             
         }
     }
-    NSLog(@"block count %d",numberOfBricks);
-    return numberOfBricks == 0 ? TRUE: FALSE;
+     return numberOfBricks == 0 ? TRUE: FALSE;
 }
 
 #pragma mark Handling Button Actions

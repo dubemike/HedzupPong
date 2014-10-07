@@ -36,10 +36,10 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [self activateFonts];
     
-    GameScene *scene = [GameScene unarchiveFromFile:@"GameScene"];
-    scene.currentUserName = @"dubemike@outlook.com";
+   // GameScene *scene = [GameScene unarchiveFromFile:@"GameScene"];
+    //scene.currentUserName = @"dubemike@outlook.com";
 
-   //   MainMenu *scene = [MainMenu unarchiveFromFile:@"MainMenu"];
+     MainMenu *scene = [MainMenu unarchiveFromFile:@"MainMenu"];
 
     /* Set the scale mode to scale to fit the window */
     scene.scaleMode = SKSceneScaleModeAspectFit;
@@ -49,8 +49,8 @@
     /* Sprite Kit applies additional optimizations to improve rendering performance */
     self.skView.ignoresSiblingOrder = YES;
     
-    self.skView.showsFPS = YES;
-    self.skView.showsNodeCount = YES;
+    self.skView.showsFPS = NO;
+    self.skView.showsNodeCount = NO;
 }
 
 - (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {

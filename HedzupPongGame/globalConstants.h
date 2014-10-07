@@ -43,11 +43,14 @@
 #define NAME_EMAIL_FIELD @"EmailFieldPlain"
 #define NAME_LEADER_BOARD_BANNER @"leaderBanner"
 #define NAME_LEADER_BOARD_LABEL @"leaderBannerLabels"
+#define NAME_UPDATE_SCREEN_TEXT @"homeGameTimeText"
 
 #define PLAYER_MOVE_VELOCITY_OFFSET 100.0f
 #define WORLD_BLOCK_COUNT  21
+#define MUSIC_VOLUME  0.2f
+
 #define SCORE_DEFAULT 3;
-#define TOTALGAMETIME 30;
+#define TOTALGAMETIME 20;
 
 //TEXT
 #define HOME_ENTER_EMAIL_TEXT @"ENTER EMAIL & PRESS ENTER"
@@ -62,8 +65,10 @@
     #define VOICE_HIGHSCORE @"british_high_score.caf"
     #define VOICE_GAMEOVER @"british_game_over.caf"
     #define VOICE_FLOWER_POWER @"british_flower_power.caf"
+    #define VOICE_HEDZUP @"british_hedzup-1.caf"
     #define SOUNDEFFECT_BALL_PLAYER @"nes-00-01.wav"
     #define SOUNDEFFECT_BRICK_DIE @"nes-14-08.wav"
+    #define SOUNDEFFECT_USER_DIE @"nes-14-08.wav"
 
 
 
@@ -74,7 +79,7 @@
 
 #endif
 
-#define SONG_ONE @"Magical_8bit_tour_.mp3"
-#define SONG_TWO @"Everything_Is_Awesome.mp3"
+#define SONG_ONE @"Magical_8bit_tour_"
+#define SONG_TWO @"Everything_Is_Awesome"
 
 #endif

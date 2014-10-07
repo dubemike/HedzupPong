@@ -135,6 +135,10 @@
         if ([currentUserScore.score integerValue] < [[data valueForKey:@"score"] integerValue]) {
             [currentUserScore safeSetValuesForKeysWithDictionary:data dateFormatter:df];
          }
+        //update number of playthrus
+        int currentPlayCount = [currentUserScore.numberOfPlays intValue];
+        currentPlayCount ++;
+        [currentUserScore setValue:[NSNumber numberWithInt:currentPlayCount] forKey:@"numberOfPlays"];
 
     }else{
         HighScores *newUserAccount = [[HighScores alloc] initWithEntity: [NSEntityDescription entityForName:@"HighScores" inManagedObjectContext:ctx] insertIntoManagedObjectContext:ctx];
@@ -158,6 +162,7 @@
     }];
 
 
+    //export to documents libray
     
 
 }

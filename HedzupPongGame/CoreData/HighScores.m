@@ -14,5 +14,5 @@
 @dynamic userName;
 @dynamic score;
 @dynamic savedDate;
-
+@dynamic numberOfPlays;
 @end

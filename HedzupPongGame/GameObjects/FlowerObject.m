@@ -33,6 +33,23 @@
     [self runAction:[SKAction playSoundFileNamed:VOICE_FLOWER_POWER waitForCompletion:NO]];  //play a sound
     hitCount--;
     
+    SKLabelNode *pointScore = [SKLabelNode labelNodeWithFontNamed:@"8BIT WONDER"];
+    [pointScore setText:[NSString stringWithFormat:@"+%d",self.ScorePOint]];
+    pointScore.fontSize = 30;
+    [self addChild:pointScore];
+    
+    SKAction * actionFade = [SKAction fadeAlphaTo:0.1 duration:6.0f];
+    SKAction * actionGrow = [SKAction scaleBy:4 duration:3.0f];
+    SKAction * actionMove = [SKAction moveByX:0 y:-400  duration:1.2f];
+    SKAction * wait = [SKAction waitForDuration:2];
+    
+    SKAction * actionMoveDone = [SKAction removeFromParent];
+    isActive = false;
+    [pointScore runAction:[SKAction group:@[actionFade,actionGrow, actionMove]]];
+    [pointScore runAction:[SKAction sequence:@[wait, actionMoveDone]]];
+    
+    
+    
     if (hitCount<0) {
         //we dead
         SKAction * actionFade = [SKAction fadeAlphaTo:0 duration:0.2f];

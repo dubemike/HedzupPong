@@ -8,13 +8,13 @@
 #import <Foundation/Foundation.h>
 #import "ArchiverMediator.h"
 #import <SpriteKit/SpriteKit.h>
-
+#import <AVFoundation/AVFoundation.h>
 
 @interface HUPongManager : NSObject
 {
     ArchiverMediator *meddClass;
     NSMutableDictionary *soundFiles;
-
+    AVAudioPlayer *player ;
 }
 
 + (HUPongManager *) sharedInstance;
@@ -31,4 +31,5 @@
 -(void) playSoundFilewithName:(NSString*) name fromParentScene:(SKScene*) scene;
 -(void) playSoundFilewithName:(NSString*) name fromParentNode:(SKNode*) node;
 
+-(void) playBackGroundSongWithName:(NSString*) name;
 @end
