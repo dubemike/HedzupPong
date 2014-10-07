@@ -59,10 +59,12 @@
             [self.userNameLabel removeFromParent];
             SKSpriteNode *emailNowNowSprite = (SKSpriteNode*)[self childNodeWithName:NAME_EMAIL_FIELD];
             if (emailNowNowSprite) {
-                [emailNowNowSprite removeFromParent];
+                [emailNowNowSprite removeAllActions];
+                 [emailNowNowSprite removeFromParent];
             }
             
-             [[HUPongManager sharedInstance] playSoundFilewithName:VOICE_WELCOME fromParentScene:self];
+            [self removeAllActions];
+ 
             
             //add the PLAY NOW LOGO
             SKTexture *playNow = [SKTexture textureWithImageNamed:@"playnow-with-flowers.png"];
@@ -72,25 +74,28 @@
             playNowSprite.xScale = 0.5;
             playNowSprite.yScale = 0.5;
             [self addChild:playNowSprite];
-             
+            
+            [[HUPongManager sharedInstance] playSoundFilewithName:VOICE_WELCOME fromParentNode:playNowSprite];
+
         }break;
             
             
         case ENTER_USERNAME:{
             
-             [[HUPongManager sharedInstance] playSoundFilewithName:VOICE_PRESS_ENTER fromParentScene:self];
-            
-           // [self runAction:[SKAction playSoundFileNamed:@"intro.caf" waitForCompletion:NO]];
-
-            SKSpriteNode *playNowSprite = (SKSpriteNode*)[self childNodeWithName:NAME_HOME_PLAY_NOW];
+            [self removeAllActions];
+             SKSpriteNode *playNowSprite = (SKSpriteNode*)[self childNodeWithName:NAME_HOME_PLAY_NOW];
             if (playNowSprite) {
+                [playNowSprite removeAllActions];
                 [playNowSprite removeFromParent];
              }
             [self layoutEnterUserName];
+            
+
         } break;
             
         case START_GAME:{
             GameScene* gameplayScene = [[GameScene alloc] initWithSize:self.frame.size ];
+            gameplayScene.currentUserName = [currentTypedText lowercaseString];
             [self.view presentScene:gameplayScene];
 
         }
@@ -133,6 +138,7 @@
     playNowSprite.yScale = 0.5;
     [self addChild:playNowSprite];
     
+    [[HUPongManager sharedInstance] playSoundFilewithName:VOICE_PRESS_ENTER fromParentNode:playNowSprite];
 
     self.userNameLabel.position = CGPointMake(CGRectGetMidX(self.frame), playNowSprite.position.y -  10); ;
 

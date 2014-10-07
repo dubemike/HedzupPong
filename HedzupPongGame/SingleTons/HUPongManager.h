@@ -26,6 +26,9 @@
 //user accounts
 -(void) addUserHighScore:(NSString*) userName andHighScore:(int) score;
 -(NSArray*) getAllUserHighScores;
+-(HighScores*) getHighestScore;
+
 -(void) playSoundFilewithName:(NSString*) name fromParentScene:(SKScene*) scene;
+-(void) playSoundFilewithName:(NSString*) name fromParentNode:(SKNode*) node;
 
 @end

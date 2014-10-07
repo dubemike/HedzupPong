@@ -17,6 +17,8 @@
 		F50217EC19E2AB9D001C9355 /* PRPBasicDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F50217E519E2AB9D001C9355 /* PRPBasicDataModel.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		F50217F219E2B001001C9355 /* HUPongManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F50217F119E2B001001C9355 /* HUPongManager.m */; };
 		F50217F519E2CBB2001C9355 /* MainMenu.sks in Resources */ = {isa = PBXBuildFile; fileRef = F50217F419E2CBB2001C9355 /* MainMenu.sks */; };
+		F508993519E36932002F11A7 /* FlowerObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F508993419E36932002F11A7 /* FlowerObject.m */; };
+		F508993719E36AA9002F11A7 /* british_flower_power.caf in Resources */ = {isa = PBXBuildFile; fileRef = F508993619E36AA9002F11A7 /* british_flower_power.caf */; };
 		F54FFEB619DDE948004848EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFEB519DDE948004848EE /* AppDelegate.m */; };
 		F54FFEB819DDE948004848EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFEB719DDE948004848EE /* main.m */; };
 		F54FFEBB19DDE948004848EE /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = F54FFEBA19DDE948004848EE /* GameScene.m */; };
@@ -38,11 +40,7 @@
 		F591397019E2E76800C815F2 /* playnow-with-flowers.png in Resources */ = {isa = PBXBuildFile; fileRef = F591396C19E2E76800C815F2 /* playnow-with-flowers.png */; };
 		F591397119E2E76800C815F2 /* ping-pong-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = F591396D19E2E76800C815F2 /* ping-pong-logo.png */; };
 		F591397219E2E76800C815F2 /* pong-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F591396E19E2E76800C815F2 /* pong-bg.png */; };
-		F591398119E2E77500C815F2 /* british_flower_power.caf in Resources */ = {isa = PBXBuildFile; fileRef = F591397419E2E77500C815F2 /* british_flower_power.caf */; };
-		F591398219E2E77500C815F2 /* british_game_over.caf in Resources */ = {isa = PBXBuildFile; fileRef = F591397519E2E77500C815F2 /* british_game_over.caf */; };
 		F591398319E2E77500C815F2 /* british_hedzup.caf in Resources */ = {isa = PBXBuildFile; fileRef = F591397619E2E77500C815F2 /* british_hedzup.caf */; };
-		F591398619E2E77500C815F2 /* british_press_enter.caf in Resources */ = {isa = PBXBuildFile; fileRef = F591397919E2E77500C815F2 /* british_press_enter.caf */; };
-		F591398719E2E77500C815F2 /* chinese_flower_power.caf in Resources */ = {isa = PBXBuildFile; fileRef = F591397A19E2E77500C815F2 /* chinese_flower_power.caf */; };
 		F591398819E2E77500C815F2 /* chinese_game_over_go_cry_to_your_friends.caf in Resources */ = {isa = PBXBuildFile; fileRef = F591397B19E2E77500C815F2 /* chinese_game_over_go_cry_to_your_friends.caf */; };
 		F591398919E2E77500C815F2 /* chinese_game_over_try_again.caf in Resources */ = {isa = PBXBuildFile; fileRef = F591397C19E2E77500C815F2 /* chinese_game_over_try_again.caf */; };
 		F591398A19E2E77500C815F2 /* chinese_hedzup.caf in Resources */ = {isa = PBXBuildFile; fileRef = F591397D19E2E77500C815F2 /* chinese_hedzup.caf */; };
@@ -55,6 +53,17 @@
 		F5F95C5A19E3381300D6AD54 /* intro.caf in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C5919E3381300D6AD54 /* intro.caf */; };
 		F5F95C5C19E33B2E00D6AD54 /* british_high_score.caf in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C5B19E33B2E00D6AD54 /* british_high_score.caf */; };
 		F5F95C5E19E33CA700D6AD54 /* british_intro.caf in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C5D19E33CA700D6AD54 /* british_intro.caf */; };
+		F5F95C6019E33D3E00D6AD54 /* british_game_over.caf in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C5F19E33D3E00D6AD54 /* british_game_over.caf */; };
+		F5F95C6419E33E7F00D6AD54 /* british_press_enter.caf in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C6319E33E7F00D6AD54 /* british_press_enter.caf */; };
+		F5F95C6619E3400900D6AD54 /* game-over-screen-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C6519E3400900D6AD54 /* game-over-screen-bg.png */; };
+		F5F95C7119E344EC00D6AD54 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C6919E344EC00D6AD54 /* 1.png */; };
+		F5F95C7219E344EC00D6AD54 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C6A19E344EC00D6AD54 /* 2.png */; };
+		F5F95C7319E344EC00D6AD54 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C6B19E344EC00D6AD54 /* 3.png */; };
+		F5F95C7419E344EC00D6AD54 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C6C19E344EC00D6AD54 /* 4.png */; };
+		F5F95C7519E344EC00D6AD54 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C6D19E344EC00D6AD54 /* 5.png */; };
+		F5F95C7619E344EC00D6AD54 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C6E19E344EC00D6AD54 /* 6.png */; };
+		F5F95C7719E344EC00D6AD54 /* game-screen-layout.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C6F19E344EC00D6AD54 /* game-screen-layout.png */; };
+		F5F95C7819E344EC00D6AD54 /* leaderboard-banner.png in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C7019E344EC00D6AD54 /* leaderboard-banner.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +92,9 @@
 		F50217F019E2B001001C9355 /* HUPongManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HUPongManager.h; sourceTree = "<group>"; };
 		F50217F119E2B001001C9355 /* HUPongManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HUPongManager.m; sourceTree = "<group>"; };
 		F50217F419E2CBB2001C9355 /* MainMenu.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MainMenu.sks; sourceTree = "<group>"; };
+		F508993319E36932002F11A7 /* FlowerObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlowerObject.h; path = GameObjects/FlowerObject.h; sourceTree = "<group>"; };
+		F508993419E36932002F11A7 /* FlowerObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlowerObject.m; path = GameObjects/FlowerObject.m; sourceTree = "<group>"; };
+		F508993619E36AA9002F11A7 /* british_flower_power.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = british_flower_power.caf; sourceTree = "<group>"; };
 		F54FFEAF19DDE948004848EE /* HedzupPongGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HedzupPongGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F54FFEB319DDE948004848EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F54FFEB419DDE948004848EE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -118,11 +130,7 @@
 		F591396C19E2E76800C815F2 /* playnow-with-flowers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "playnow-with-flowers.png"; path = "Assets/playnow-with-flowers.png"; sourceTree = "<group>"; };
 		F591396D19E2E76800C815F2 /* ping-pong-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ping-pong-logo.png"; path = "Assets/ping-pong-logo.png"; sourceTree = "<group>"; };
 		F591396E19E2E76800C815F2 /* pong-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pong-bg.png"; path = "Assets/pong-bg.png"; sourceTree = "<group>"; };
-		F591397419E2E77500C815F2 /* british_flower_power.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = british_flower_power.caf; sourceTree = "<group>"; };
-		F591397519E2E77500C815F2 /* british_game_over.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = british_game_over.caf; sourceTree = "<group>"; };
 		F591397619E2E77500C815F2 /* british_hedzup.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = british_hedzup.caf; sourceTree = "<group>"; };
-		F591397919E2E77500C815F2 /* british_press_enter.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = british_press_enter.caf; sourceTree = "<group>"; };
-		F591397A19E2E77500C815F2 /* chinese_flower_power.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chinese_flower_power.caf; sourceTree = "<group>"; };
 		F591397B19E2E77500C815F2 /* chinese_game_over_go_cry_to_your_friends.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chinese_game_over_go_cry_to_your_friends.caf; sourceTree = "<group>"; };
 		F591397C19E2E77500C815F2 /* chinese_game_over_try_again.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chinese_game_over_try_again.caf; sourceTree = "<group>"; };
 		F591397D19E2E77500C815F2 /* chinese_hedzup.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = chinese_hedzup.caf; sourceTree = "<group>"; };
@@ -135,6 +143,17 @@
 		F5F95C5919E3381300D6AD54 /* intro.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = intro.caf; sourceTree = "<group>"; };
 		F5F95C5B19E33B2E00D6AD54 /* british_high_score.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = british_high_score.caf; sourceTree = "<group>"; };
 		F5F95C5D19E33CA700D6AD54 /* british_intro.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = british_intro.caf; sourceTree = "<group>"; };
+		F5F95C5F19E33D3E00D6AD54 /* british_game_over.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = british_game_over.caf; sourceTree = "<group>"; };
+		F5F95C6319E33E7F00D6AD54 /* british_press_enter.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = british_press_enter.caf; sourceTree = "<group>"; };
+		F5F95C6519E3400900D6AD54 /* game-over-screen-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "game-over-screen-bg.png"; path = "Assets/game-over-screen-bg.png"; sourceTree = "<group>"; };
+		F5F95C6919E344EC00D6AD54 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		F5F95C6A19E344EC00D6AD54 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		F5F95C6B19E344EC00D6AD54 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		F5F95C6C19E344EC00D6AD54 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		F5F95C6D19E344EC00D6AD54 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		F5F95C6E19E344EC00D6AD54 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		F5F95C6F19E344EC00D6AD54 /* game-screen-layout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "game-screen-layout.png"; sourceTree = "<group>"; };
+		F5F95C7019E344EC00D6AD54 /* leaderboard-banner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leaderboard-banner.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +214,15 @@
 				F50217F119E2B001001C9355 /* HUPongManager.m */,
 			);
 			path = SingleTons;
+			sourceTree = "<group>";
+		};
+		F508993219E36915002F11A7 /* Flower */ = {
+			isa = PBXGroup;
+			children = (
+				F508993319E36932002F11A7 /* FlowerObject.h */,
+				F508993419E36932002F11A7 /* FlowerObject.m */,
+			);
+			name = Flower;
 			sourceTree = "<group>";
 		};
 		F54FFEA619DDE948004848EE = {
@@ -304,6 +332,8 @@
 		F5695D1319DE826900DBA058 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				F5F95C6719E344EC00D6AD54 /* game screen */,
+				F5F95C6519E3400900D6AD54 /* game-over-screen-bg.png */,
 				F591396B19E2E76800C815F2 /* emial-box-plain.png */,
 				F591396C19E2E76800C815F2 /* playnow-with-flowers.png */,
 				F591396D19E2E76800C815F2 /* ping-pong-logo.png */,
@@ -377,6 +407,7 @@
 		F5695D3619E17EC600DBA058 /* bricks */ = {
 			isa = PBXGroup;
 			children = (
+				F508993219E36915002F11A7 /* Flower */,
 				F5695D3719E17F1400DBA058 /* BrickObject.h */,
 				F5695D3819E17F1400DBA058 /* BrickObject.m */,
 			);
@@ -386,15 +417,14 @@
 		F591397319E2E77400C815F2 /* Voices */ = {
 			isa = PBXGroup;
 			children = (
+				F508993619E36AA9002F11A7 /* british_flower_power.caf */,
+				F5F95C6319E33E7F00D6AD54 /* british_press_enter.caf */,
+				F5F95C5F19E33D3E00D6AD54 /* british_game_over.caf */,
 				F5F95C5D19E33CA700D6AD54 /* british_intro.caf */,
 				F5F95C5B19E33B2E00D6AD54 /* british_high_score.caf */,
 				F5F95C5919E3381300D6AD54 /* intro.caf */,
 				F5F95C5719E3353300D6AD54 /* chinese_intro.wav */,
-				F591397419E2E77500C815F2 /* british_flower_power.caf */,
-				F591397519E2E77500C815F2 /* british_game_over.caf */,
 				F591397619E2E77500C815F2 /* british_hedzup.caf */,
-				F591397919E2E77500C815F2 /* british_press_enter.caf */,
-				F591397A19E2E77500C815F2 /* chinese_flower_power.caf */,
 				F591397B19E2E77500C815F2 /* chinese_game_over_go_cry_to_your_friends.caf */,
 				F591397C19E2E77500C815F2 /* chinese_game_over_try_again.caf */,
 				F591397D19E2E77500C815F2 /* chinese_hedzup.caf */,
@@ -404,6 +434,30 @@
 			);
 			name = Voices;
 			path = Assets/Voices;
+			sourceTree = "<group>";
+		};
+		F5F95C6719E344EC00D6AD54 /* game screen */ = {
+			isa = PBXGroup;
+			children = (
+				F5F95C6819E344EC00D6AD54 /* flower */,
+				F5F95C6F19E344EC00D6AD54 /* game-screen-layout.png */,
+				F5F95C7019E344EC00D6AD54 /* leaderboard-banner.png */,
+			);
+			name = "game screen";
+			path = "Assets/game screen";
+			sourceTree = "<group>";
+		};
+		F5F95C6819E344EC00D6AD54 /* flower */ = {
+			isa = PBXGroup;
+			children = (
+				F5F95C6919E344EC00D6AD54 /* 1.png */,
+				F5F95C6A19E344EC00D6AD54 /* 2.png */,
+				F5F95C6B19E344EC00D6AD54 /* 3.png */,
+				F5F95C6C19E344EC00D6AD54 /* 4.png */,
+				F5F95C6D19E344EC00D6AD54 /* 5.png */,
+				F5F95C6E19E344EC00D6AD54 /* 6.png */,
+			);
+			path = flower;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,14 +547,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F54FFEBD19DDE948004848EE /* GameScene.sks in Resources */,
+				F5F95C7119E344EC00D6AD54 /* 1.png in Resources */,
+				F5F95C7219E344EC00D6AD54 /* 2.png in Resources */,
+				F5F95C7319E344EC00D6AD54 /* 3.png in Resources */,
 				F591398D19E2E77500C815F2 /* chinese_why_you_no_press_enter.caf in Resources */,
 				F5695D1C19DEA45200DBA058 /* ball.png in Resources */,
+				F5F95C7619E344EC00D6AD54 /* 6.png in Resources */,
+				F508993719E36AA9002F11A7 /* british_flower_power.caf in Resources */,
 				F591398319E2E77500C815F2 /* british_hedzup.caf in Resources */,
 				F5F95C5E19E33CA700D6AD54 /* british_intro.caf in Resources */,
-				F591398619E2E77500C815F2 /* british_press_enter.caf in Resources */,
 				F591397019E2E76800C815F2 /* playnow-with-flowers.png in Resources */,
 				F50217CF19E27D1C001C9355 /* 8-BIT WONDER.TTF in Resources */,
-				F591398219E2E77500C815F2 /* british_game_over.caf in Resources */,
+				F5F95C6019E33D3E00D6AD54 /* british_game_over.caf in Resources */,
 				F50217F519E2CBB2001C9355 /* MainMenu.sks in Resources */,
 				F591396A19E2E75600C815F2 /* Magical_8bit_tour_.mp3 in Resources */,
 				F591398A19E2E77500C815F2 /* chinese_hedzup.caf in Resources */,
@@ -511,19 +569,23 @@
 				F50217D319E28FE7001C9355 /* nes-14-08.wav in Resources */,
 				F591398919E2E77500C815F2 /* chinese_game_over_try_again.caf in Resources */,
 				F591398819E2E77500C815F2 /* chinese_game_over_go_cry_to_your_friends.caf in Resources */,
+				F5F95C7519E344EC00D6AD54 /* 5.png in Resources */,
 				F591397219E2E76800C815F2 /* pong-bg.png in Resources */,
+				F5F95C6619E3400900D6AD54 /* game-over-screen-bg.png in Resources */,
 				F591396F19E2E76800C815F2 /* emial-box-plain.png in Resources */,
-				F591398719E2E77500C815F2 /* chinese_flower_power.caf in Resources */,
 				F5695D3519E17D0500DBA058 /* blocks.png in Resources */,
 				F591399119E3221800C815F2 /* Everything_Is_Awesome.mp3 in Resources */,
 				F591398C19E2E77500C815F2 /* chinese_intro.caf in Resources */,
+				F5F95C7819E344EC00D6AD54 /* leaderboard-banner.png in Resources */,
+				F5F95C6419E33E7F00D6AD54 /* british_press_enter.caf in Resources */,
+				F5F95C7419E344EC00D6AD54 /* 4.png in Resources */,
 				F591397119E2E76800C815F2 /* ping-pong-logo.png in Resources */,
 				F591398B19E2E77500C815F2 /* chinese_high_score.caf in Resources */,
 				F5F95C5819E3353300D6AD54 /* chinese_intro.wav in Resources */,
+				F5F95C7719E344EC00D6AD54 /* game-screen-layout.png in Resources */,
 				F5F95C5619E329C500D6AD54 /* half_bold_pixel-7.ttf in Resources */,
 				F50217D419E28FE7001C9355 /* nes-00-01.wav in Resources */,
 				F5F95C5C19E33B2E00D6AD54 /* british_high_score.caf in Resources */,
-				F591398119E2E77500C815F2 /* british_flower_power.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +618,7 @@
 				F5695D2519DECD5C00DBA058 /* HUPongGameObject.m in Sources */,
 				F5695D3919E17F1400DBA058 /* BrickObject.m in Sources */,
 				F5695D2D19DED42B00DBA058 /* MainMenu.m in Sources */,
+				F508993519E36932002F11A7 /* FlowerObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

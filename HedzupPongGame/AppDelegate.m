@@ -36,8 +36,10 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     [self activateFonts];
     
-   // GameScene *scene = [GameScene unarchiveFromFile:@"GameScene"];
-      MainMenu *scene = [MainMenu unarchiveFromFile:@"MainMenu"];
+    GameScene *scene = [GameScene unarchiveFromFile:@"GameScene"];
+    scene.currentUserName = @"dubemike@outlook.com";
+
+   //   MainMenu *scene = [MainMenu unarchiveFromFile:@"MainMenu"];
 
     /* Set the scale mode to scale to fit the window */
     scene.scaleMode = SKSceneScaleModeAspectFit;

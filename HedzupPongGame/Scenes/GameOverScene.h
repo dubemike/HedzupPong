@@ -20,8 +20,7 @@ typedef enum  {
     GAMEOVER gameOverStatus;
     int currentGameTime ;
 }
-
+@property (nonatomic)  NSString* scoreUserName;
 @property (nonatomic) SKLabelNode* gameOverLabelTimer;
--(id)initWithSize:(CGSize)size playerWon:(BOOL)isWon;
-
+-(id)initWithSize:(CGSize)size playerWon:(BOOL)isWon withScore:(int) currentScore andUserEmail:(NSString*) email;
 @end

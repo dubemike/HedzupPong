@@ -37,6 +37,12 @@ static HUPongManager *sharedSingleton_ = nil;
         
         [soundFiles setObject:[SKAction playSoundFileNamed:VOICE_WELCOME waitForCompletion:NO] forKey:VOICE_WELCOME];
         [soundFiles setObject:[SKAction playSoundFileNamed:VOICE_PRESS_ENTER waitForCompletion:NO] forKey:VOICE_PRESS_ENTER];
+        [soundFiles setObject:[SKAction playSoundFileNamed:VOICE_HIGHSCORE waitForCompletion:NO] forKey:VOICE_HIGHSCORE];
+        [soundFiles setObject:[SKAction playSoundFileNamed:VOICE_GAMEOVER waitForCompletion:NO] forKey:VOICE_GAMEOVER];
+        [soundFiles setObject:[SKAction playSoundFileNamed:VOICE_FLOWER_POWER waitForCompletion:NO] forKey:VOICE_FLOWER_POWER];
+        [soundFiles setObject:[SKAction playSoundFileNamed:SOUNDEFFECT_BALL_PLAYER waitForCompletion:NO] forKey:SOUNDEFFECT_BALL_PLAYER];
+        [soundFiles setObject:[SKAction playSoundFileNamed:SOUNDEFFECT_BRICK_DIE waitForCompletion:NO] forKey:SOUNDEFFECT_BRICK_DIE];
+
         [soundFiles setObject:[SKAction playSoundFileNamed:SONG_ONE waitForCompletion:NO] forKey:SONG_ONE];
         [soundFiles setObject:[SKAction playSoundFileNamed:SONG_TWO waitForCompletion:NO] forKey:SONG_TWO];
 
@@ -49,10 +55,15 @@ static HUPongManager *sharedSingleton_ = nil;
 
 -(void) playSoundFilewithName:(NSString*) name fromParentScene:(SKScene*) scene
 {
-    [scene runAction:[soundFiles objectForKey:name]];  //play a sound
+    [scene runAction:[soundFiles objectForKey:name] withKey:name];  //play a sound
 
 }
 
+-(void) playSoundFilewithName:(NSString*) name fromParentNode:(SKNode*) node
+{
+    [node runAction:[soundFiles objectForKey:name] withKey:name];  //play a sound
+    
+}
 
 -(void) addUserHighScore:(NSString*) userName andHighScore:(int) score{
 
@@ -73,7 +84,19 @@ static HUPongManager *sharedSingleton_ = nil;
     
  }
 
-
+-(HighScores*) getHighestScore;
+{
+    NSSortDescriptor *highToLow = [[NSSortDescriptor alloc] initWithKey:@"score" ascending:FALSE];
+    
+    NSArray *allUSers = [[[NSArray alloc] initWithArray:[HighScores findAllObjectsInContext:[self getManagedObjectContextForUse]]] sortedArrayUsingDescriptors:[NSArray arrayWithObject:highToLow]] ;
+    
+    if ([allUSers count]==0) {
+        return nil;
+    }
+    
+    
+    return [allUSers objectAtIndex:0];
+}
 
 
 //database

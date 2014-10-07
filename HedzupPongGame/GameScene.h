@@ -13,18 +13,21 @@
 #import "BallObject.h"
 #import "PaddleBoard.h"
 #import "BrickObject.h"
+#import "FlowerObject.h"
 
 @interface GameScene : SKScene <SKPhysicsContactDelegate>
 {
     int lives;
-     int currentGameTime;
-    
+    int currentGameTime;
+    NSArray *leaderBoardScores;
  }
 
 @property (nonatomic,retain) IBOutlet PaddleBoard *playerNode;
 @property (nonatomic)  int currentScore;
 @property (nonatomic)  SKLabelNode* timerLabel;
 @property (nonatomic)  SKLabelNode* pointsLabel;
+@property (nonatomic)  SKSpriteNode* leaderBoardImage;
+
 @property (nonatomic)  NSString* currentUserName;
 
 -(void) layOutInitialGameWorld;
