@@ -52,8 +52,8 @@
 		F591399119E3221800C815F2 /* Everything_Is_Awesome.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F591399019E3221800C815F2 /* Everything_Is_Awesome.mp3 */; };
 		F5DDF5F61A756C4100E1B0AF /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = F5DDF5F41A756C4100E1B0AF /* LICENSE */; };
 		F5DDF5F71A756C4100E1B0AF /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F5DDF5F51A756C4100E1B0AF /* README.md */; };
-		F5DDF5FB1A756F5800E1B0AF /* screenshotOne.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F5DDF5F91A756F5800E1B0AF /* screenshotOne.tiff */; };
-		F5DDF5FC1A756F5800E1B0AF /* screenshotTwo.tiff in Resources */ = {isa = PBXBuildFile; fileRef = F5DDF5FA1A756F5800E1B0AF /* screenshotTwo.tiff */; };
+		F5DDF6041A75773000E1B0AF /* screenshotOne.png in Resources */ = {isa = PBXBuildFile; fileRef = F5DDF6021A75773000E1B0AF /* screenshotOne.png */; };
+		F5DDF6051A75773000E1B0AF /* screenshotTwo.png in Resources */ = {isa = PBXBuildFile; fileRef = F5DDF6031A75773000E1B0AF /* screenshotTwo.png */; };
 		F5F95C5619E329C500D6AD54 /* half_bold_pixel-7.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C5519E329C500D6AD54 /* half_bold_pixel-7.ttf */; };
 		F5F95C5819E3353300D6AD54 /* chinese_intro.wav in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C5719E3353300D6AD54 /* chinese_intro.wav */; };
 		F5F95C5A19E3381300D6AD54 /* intro.caf in Resources */ = {isa = PBXBuildFile; fileRef = F5F95C5919E3381300D6AD54 /* intro.caf */; };
@@ -149,8 +149,8 @@
 		F591399019E3221800C815F2 /* Everything_Is_Awesome.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = Everything_Is_Awesome.mp3; path = Assets/sounds/Everything_Is_Awesome.mp3; sourceTree = "<group>"; };
 		F5DDF5F41A756C4100E1B0AF /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		F5DDF5F51A756C4100E1B0AF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		F5DDF5F91A756F5800E1B0AF /* screenshotOne.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = screenshotOne.tiff; sourceTree = "<group>"; };
-		F5DDF5FA1A756F5800E1B0AF /* screenshotTwo.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = screenshotTwo.tiff; sourceTree = "<group>"; };
+		F5DDF6021A75773000E1B0AF /* screenshotOne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshotOne.png; sourceTree = "<group>"; };
+		F5DDF6031A75773000E1B0AF /* screenshotTwo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshotTwo.png; sourceTree = "<group>"; };
 		F5F95C5519E329C500D6AD54 /* half_bold_pixel-7.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "half_bold_pixel-7.ttf"; sourceTree = "<group>"; };
 		F5F95C5719E3353300D6AD54 /* chinese_intro.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chinese_intro.wav; sourceTree = "<group>"; };
 		F5F95C5919E3381300D6AD54 /* intro.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = intro.caf; sourceTree = "<group>"; };
@@ -340,7 +340,7 @@
 		F5695D1219DE825700DBA058 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				F5DDF5F81A756F5800E1B0AF /* Screenshots */,
+				F5DDF6011A75773000E1B0AF /* Screenshots */,
 				F591397319E2E77400C815F2 /* Voices */,
 				F5695D2919DED33600DBA058 /* Fonts */,
 				F5695D1419DE827000DBA058 /* Sounds */,
@@ -456,11 +456,11 @@
 			path = Assets/Voices;
 			sourceTree = "<group>";
 		};
-		F5DDF5F81A756F5800E1B0AF /* Screenshots */ = {
+		F5DDF6011A75773000E1B0AF /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
-				F5DDF5F91A756F5800E1B0AF /* screenshotOne.tiff */,
-				F5DDF5FA1A756F5800E1B0AF /* screenshotTwo.tiff */,
+				F5DDF6021A75773000E1B0AF /* screenshotOne.png */,
+				F5DDF6031A75773000E1B0AF /* screenshotTwo.png */,
 			);
 			path = Screenshots;
 			sourceTree = "<group>";
@@ -605,15 +605,15 @@
 				F5695D3519E17D0500DBA058 /* blocks.png in Resources */,
 				F591399119E3221800C815F2 /* Everything_Is_Awesome.mp3 in Resources */,
 				F591398C19E2E77500C815F2 /* chinese_intro.caf in Resources */,
+				F5DDF6051A75773000E1B0AF /* screenshotTwo.png in Resources */,
 				F5DDF5F61A756C4100E1B0AF /* LICENSE in Resources */,
 				F5F95C7819E344EC00D6AD54 /* leaderboard-banner.png in Resources */,
 				F5F95C6419E33E7F00D6AD54 /* british_press_enter.caf in Resources */,
 				F5F95C7419E344EC00D6AD54 /* 4.png in Resources */,
 				F591397119E2E76800C815F2 /* ping-pong-logo.png in Resources */,
-				F5DDF5FC1A756F5800E1B0AF /* screenshotTwo.tiff in Resources */,
 				F591398B19E2E77500C815F2 /* chinese_high_score.caf in Resources */,
+				F5DDF6041A75773000E1B0AF /* screenshotOne.png in Resources */,
 				F5F95C5819E3353300D6AD54 /* chinese_intro.wav in Resources */,
-				F5DDF5FB1A756F5800E1B0AF /* screenshotOne.tiff in Resources */,
 				F5F95C7719E344EC00D6AD54 /* game-screen-layout.png in Resources */,
 				F5F95C5619E329C500D6AD54 /* half_bold_pixel-7.ttf in Resources */,
 				F50217D419E28FE7001C9355 /* nes-00-01.wav in Resources */,

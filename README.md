@@ -4,9 +4,9 @@
 ## About
 This is a OSX Spritekit game created as part of a two day hackathon. It was used as part of a competition. The player with the highest score would win a smartphone. 
 
-![BackgroundImage](https://github.com/dubemike/HedzupPong/blob/master/HedzupPongGame/Screenshots/screenshotOne.tiff)
+![BackgroundImage](https://github.com/dubemike/HedzupPong/blob/master/HedzupPongGame/Screenshots/screenshotOne.png)
 
-![BackgroundImage](https://github.com/dubemike/HedzupPong/blob/master/HedzupPongGame/Screenshots/screenshotTwo.tiff)
+![BackgroundImage](https://github.com/dubemike/HedzupPong/blob/master/HedzupPongGame/Screenshots/screenshotTwo.png
 
 ## Author
 I'm Michael Dube, I'm on [Twitter](https://twitter.com/dubemike) or on my website [Website](http://www.dubemike.com)
