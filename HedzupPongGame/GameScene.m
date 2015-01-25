@@ -308,8 +308,7 @@
     if (gameOverNow) {
         return;
     }
-    int found = 0;
-    for (SKNode* node in self.children) {
+     for (SKNode* node in self.children) {
         if ([node.name isEqual: NAME_BALL_CATEGORY]) {
             return; //dont add balls if they already exist
         }
@@ -320,9 +319,7 @@
     [ball setUpObjectInParent:self];
     ball.tag = lives;
     
-   // ball.position = CGPointMake(CGRectGetMidX(self.frame),
-     //                           self.frame.size.height-20);
-    
+     
      ball.position = CGPointMake(CGRectGetMidX(self.playerNode.frame),
                               self.playerNode.frame.origin.y +40);
 
